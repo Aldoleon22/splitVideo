@@ -1,0 +1,66 @@
+2025-01-25 14:34:07 - Début du script cropVideo.php
+2025-01-25 14:34:07 - Arguments reçus: userId=00007, projectName=surfing, resolution=original
+2025-01-25 14:34:07 - Directory created: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
+2025-01-25 14:34:07 - Dossier d'entrée: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing
+2025-01-25 14:34:07 - Dossier de sortie: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
+2025-01-25 14:34:07 - Commande à exécuter: python3 /Users/livahandrianome/Sites/www/splitVideo/scripts/crop_video.py '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing' '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing' 'surfing' 'original'
+2025-01-25 14:34:27 - Sortie de la commande Python: 2025-01-25 17:34:25,579 - INFO - Input folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing
+2025-01-25 17:34:25,579 - INFO - Output folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
+2025-01-25 17:34:25,579 - INFO - Project name: surfing
+2025-01-25 17:34:25,579 - INFO - Resolution: original
+2025-01-25 17:34:25,579 - INFO - Processing file: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing/final_video (1).mp4
+2025-01-25 17:34:25,592 - INFO - Detecting scenes...
+2025-01-25 17:34:25,855 - INFO - Detected 6 scenes
+2025-01-25 17:34:25,855 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-01-25 17:34:25,855 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/198 [00:00<?, ?frame/s] 15%|█▌        | 30/198 [00:00<00:01, 144.10frame/s] 30%|███       | 60/198 [00:00<00:01, 125.12frame/s] 55%|█████▍    | 108/198 [00:00<00:00, 142.26frame/s] 70%|██████▉   | 138/198 [00:00<00:00, 150.97frame/s] 85%|████████▍ | 168/198 [00:01<00:00, 160.39frame/s]100%|██████████| 198/198 [00:01<00:00, 165.87frame/s]100%|██████████| 198/198 [00:01<00:00, 154.81frame/s]
+2025-01-25 17:34:27,205 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
+2025-01-25 17:34:27,205 - INFO - Files in output folder: final_video (1)-Scene-006.mp4, final_video (1)-Scene-005.mp4, final_video (1)-Scene-004.mp4, final_video (1)-Scene-001.mp4, final_video (1)-Scene-003.mp4, final_video (1)-Scene-002.mp4
+
+2025-01-25 14:34:27 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: final_video (1)-Scene-001.mp4, final_video (1)-Scene-002.mp4, final_video (1)-Scene-003.mp4, final_video (1)-Scene-004.mp4, final_video (1)-Scene-005.mp4, final_video (1)-Scene-006.mp4"}
+2025-01-25 23:58:23 - Début du script cropVideo.php
+2025-01-25 23:58:23 - Arguments reçus: userId=00007, projectName=test, resolution=original
+2025-01-25 23:58:23 - Directory created: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
+2025-01-25 23:58:23 - Dossier d'entrée: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test
+2025-01-25 23:58:23 - Dossier de sortie: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
+2025-01-25 23:58:23 - Commande à exécuter: python3 /Users/livahandrianome/Sites/www/splitVideo/scripts/crop_video.py '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test' '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test' 'test' 'original'
+2025-01-25 23:58:28 - Sortie de la commande Python: 2025-01-26 02:58:26,745 - INFO - Input folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test
+2025-01-26 02:58:26,746 - INFO - Output folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
+2025-01-26 02:58:26,746 - INFO - Project name: test
+2025-01-26 02:58:26,746 - INFO - Resolution: original
+2025-01-26 02:58:26,746 - INFO - Processing file: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test/0118 (1)(1).mp4
+2025-01-26 02:58:26,760 - INFO - Detecting scenes...
+2025-01-26 02:58:27,029 - INFO - Detected 2 scenes
+2025-01-26 02:58:27,029 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-01-26 02:58:27,029 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/121 [00:00<?, ?frame/s] 16%|█▌        | 19/121 [00:00<00:01, 94.85frame/s]100%|██████████| 121/121 [00:00<00:00, 142.24frame/s]100%|██████████| 121/121 [00:00<00:00, 138.85frame/s]
+2025-01-26 02:58:27,989 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
+2025-01-26 02:58:27,990 - INFO - Files in output folder: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4
+
+2025-01-25 23:58:28 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4"}
+2025-01-31 09:36:11 - Début du script cropVideo.php
+2025-01-31 09:36:11 - Arguments reçus: userId=00007, projectName=szer, resolution=original
+2025-01-31 09:36:11 - Directory created: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
+2025-01-31 09:36:11 - Dossier d'entrée: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer
+2025-01-31 09:36:11 - Dossier de sortie: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
+2025-01-31 09:36:11 - Commande à exécuter: python3 /Users/livahandrianome/Sites/www/splitVideo/scripts/crop_video.py '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer' '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer' 'szer' 'original'
+2025-01-31 09:36:20 - Sortie de la commande Python: 2025-01-31 12:36:19,329 - INFO - Input folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer
+2025-01-31 12:36:19,329 - INFO - Output folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
+2025-01-31 12:36:19,329 - INFO - Project name: szer
+2025-01-31 12:36:19,330 - INFO - Resolution: original
+2025-01-31 12:36:19,330 - INFO - Processing file: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer/0118 (1)(1).mp4
+2025-01-31 12:36:19,344 - INFO - Detecting scenes...
+2025-01-31 12:36:19,583 - INFO - Detected 2 scenes
+2025-01-31 12:36:19,583 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-01-31 12:36:19,583 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/121 [00:00<?, ?frame/s] 16%|█▌        | 19/121 [00:00<00:01, 64.78frame/s]100%|██████████| 121/121 [00:00<00:00, 179.41frame/s]100%|██████████| 121/121 [00:00<00:00, 165.49frame/s]
+2025-01-31 12:36:20,406 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
+2025-01-31 12:36:20,406 - INFO - Files in output folder: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4
+
+2025-01-31 09:36:20 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4"}

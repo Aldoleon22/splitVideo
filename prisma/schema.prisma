@@ -1,0 +1,46 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./splitvideo.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model VideoProcessingQueue {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  projectName String
+  resolution  String
+  status      String   @default("en attente") // en attente, en cours, terminé, échoué
+  priority    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  user        User     @relation(fields: [userId], references: [id])
+
+  @@index([status, priority])
+}
+
+model User {
+  id              Int      @id @default(autoincrement())
+  email           String   @unique
+  password        String
+  isVerified      Boolean  @default(false)
+  activationToken String?  @unique
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  subscription    Subscription[]
+  videoProcessingQueue VideoProcessingQueue[]
+}
+
+model Subscription {
+  id             Int      @id @default(autoincrement())
+  userId         Int      @unique
+  planId         String
+  status         String
+  lemonSqueezyId String   @unique
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  user           User     @relation(fields: [userId], references: [id])
+}
+

@@ -1,0 +1,39 @@
+2025-01-25 17:34:25,579 - INFO - Input folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing
+2025-01-25 17:34:25,579 - INFO - Output folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
+2025-01-25 17:34:25,579 - INFO - Project name: surfing
+2025-01-25 17:34:25,579 - INFO - Resolution: original
+2025-01-25 17:34:25,579 - INFO - Processing file: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing/final_video (1).mp4
+2025-01-25 17:34:25,592 - INFO - Detecting scenes...
+2025-01-25 17:34:25,855 - INFO - Detected 6 scenes
+2025-01-25 17:34:25,855 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-01-25 17:34:25,855 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-01-25 17:34:27,205 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
+2025-01-25 17:34:27,205 - INFO - Files in output folder: final_video (1)-Scene-006.mp4, final_video (1)-Scene-005.mp4, final_video (1)-Scene-004.mp4, final_video (1)-Scene-001.mp4, final_video (1)-Scene-003.mp4, final_video (1)-Scene-002.mp4
+2025-01-26 02:58:26,745 - INFO - Input folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test
+2025-01-26 02:58:26,746 - INFO - Output folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
+2025-01-26 02:58:26,746 - INFO - Project name: test
+2025-01-26 02:58:26,746 - INFO - Resolution: original
+2025-01-26 02:58:26,746 - INFO - Processing file: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test/0118 (1)(1).mp4
+2025-01-26 02:58:26,760 - INFO - Detecting scenes...
+2025-01-26 02:58:27,029 - INFO - Detected 2 scenes
+2025-01-26 02:58:27,029 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-01-26 02:58:27,029 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-01-26 02:58:27,989 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
+2025-01-26 02:58:27,990 - INFO - Files in output folder: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4
+2025-01-31 12:36:19,329 - INFO - Input folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer
+2025-01-31 12:36:19,329 - INFO - Output folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
+2025-01-31 12:36:19,329 - INFO - Project name: szer
+2025-01-31 12:36:19,330 - INFO - Resolution: original
+2025-01-31 12:36:19,330 - INFO - Processing file: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer/0118 (1)(1).mp4
+2025-01-31 12:36:19,344 - INFO - Detecting scenes...
+2025-01-31 12:36:19,583 - INFO - Detected 2 scenes
+2025-01-31 12:36:19,583 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-01-31 12:36:19,583 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-01-31 12:36:20,406 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
+2025-01-31 12:36:20,406 - INFO - Files in output folder: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4
