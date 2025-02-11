@@ -1,6 +1,7 @@
 import { Providers } from "./providers"
 import "./globals.css"
 import { ClientProviders } from "@/components/ClientProviders"
+import { ToastContainer } from "react-toastify"
 
 export const metadata = {
   title: "SplitVideo",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <Providers>
           <ClientProviders>{children}</ClientProviders>
+          <ToastContainer />
         </Providers>
       </body>
     </html>
