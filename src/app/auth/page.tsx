@@ -27,7 +27,6 @@ function AuthPageContent() {
       {
         position: 'top-right',
         autoClose: 4000,
-        // Ajouter des classes de style ShadCN ici
       }
     );
   };
@@ -111,7 +110,7 @@ function AuthPageContent() {
 
          //nofication toastify//
          showToast();
-         
+
         setSuccessNotification("Inscription réussie. Un e-mail d'activation a été envoyé pour valider votre compte.")
         setSuccess("Inscription réussie. Un e-mail d'activation a été envoyé pour valider votre compte.")
         setTimeout(() => {
