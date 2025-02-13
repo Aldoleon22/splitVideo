@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { writeFile, mkdir } from 'fs/promises'
 import path from 'path'
+import { Queue } from 'bullmq'
+import Redis from 'ioredis'
+
+const redisConnection = new Redis() // Connexion Redis
+const videoQueue = new Queue('video-processing', { connection: redisConnection })
 
 export async function POST(request: NextRequest) {
   console.log('Starting file upload process')
@@ -9,43 +14,28 @@ export async function POST(request: NextRequest) {
   const projectName = data.get('projectName')
   const userId = data.get('userId')
 
-  console.log(`Received data: projectName=${projectName}, userId=${userId}`)
-
-  if (!file) {
-    console.error('No file uploaded')
-    return NextResponse.json({ success: false, message: 'No file uploaded' }, { status: 400 })
-  }
-
-  if (!projectName) {
-    console.error('Project name is missing')
-    return NextResponse.json({ success: false, message: 'Project name is required' }, { status: 400 })
-  }
-
-  if (!userId) {
-    console.error('User ID is missing')
-    return NextResponse.json({ success: false, message: 'User ID is required' }, { status: 400 })
+  if (!file || !projectName || !userId) {
+    return NextResponse.json({ success: false, message: 'Missing parameters' }, { status: 400 })
   }
 
   const bytes = await file.arrayBuffer()
   const buffer = Buffer.from(bytes)
-
   const baseDir = path.join(process.cwd(), 'projets')
   const uploadDir = path.join(baseDir, userId as string, 'uploaded_videos', projectName as string)
 
-  console.log(`Attempting to create directory: ${uploadDir}`)
-
   try {
     await mkdir(uploadDir, { recursive: true })
-    console.log(`Directory created successfully: ${uploadDir}`)
-
     const filePath = path.join(uploadDir, file.name)
     await writeFile(filePath, buffer)
-    console.log(`File written successfully: ${filePath}`)
 
-    return NextResponse.json({ success: true, message: 'File uploaded successfully' })
+    console.log(`File saved: ${filePath}`)
+
+    // Ajouter la vidéo à la file d’attente
+    await videoQueue.add('process-video', { filePath, userId, projectName })
+
+    return NextResponse.json({ success: true, message: 'File uploaded and queued for processing' })
   } catch (error) {
-    console.error('Error during file upload:', error)
-    return NextResponse.json({ success: false, message: 'Error saving the file', error: String(error) }, { status: 500 })
+    console.error('Upload error:', error)
+    return NextResponse.json({ success: false, message: 'Error saving the file' }, { status: 500 })
   }
 }
-
