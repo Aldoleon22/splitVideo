@@ -15,6 +15,8 @@ import { encryptId } from '@/utils/cryptoUtils'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useProjectContext } from '@/contexts/ProjectContext'
 
+const CHUNK_SIZE = 10 * 1024 * 1024 // 5 Mo par chunk
+
 export default function HomePage() {
   const { data: session, status } = useSession()
   const router = useRouter()
@@ -22,6 +24,7 @@ export default function HomePage() {
   const [projectName, setProjectName] = useState('')
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [resolution, setResolution] = useState('original')
+  const [progress, setProgress] = useState(0)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
   const [showConfirmDialog, setShowConfirmDialog] = useState(false)
@@ -48,85 +51,130 @@ export default function HomePage() {
     }
   }
 
-  const handleImport = async () => {
-    if (!projectName.trim()) {
-      setError("Le nom du projet est obligatoire.")
-      return
-    }
+  
 
-    if (!selectedFile) {
-      setError("Veuillez sélectionner un fichier à importer.")
-      return
-    }
-
-    setIsLoading(true)
-    setError(null)
-    setSuccess(null)
-
-    try {
-      // Check if project exists
-      const checkResponse = await fetch(`/api/check-project?projectName=${encodeURIComponent(projectName)}&userId=${encryptId(parseInt(session.user.id))}`)
-      const checkResult = await checkResponse.json()
-
-      if (checkResult.exists) {
-        setShowConfirmDialog(true)
-        setIsLoading(false)
-        return
-      }
-
-      await uploadAndProcess()
-    } catch (error) {
-      setError(error instanceof Error ? error.message : 'Une erreur inconnue est survenue')
-      setIsLoading(false)
-    }
+const handleImport = async () => {
+  if (!projectName.trim()) {
+    setError("Le nom du projet est obligatoire.")
+    return
   }
 
-  const uploadAndProcess = async () => {
+  if (!selectedFile) {
+    setError("Veuillez sélectionner un fichier à importer.")
+    return
+  }
+
+  setIsLoading(true)
+  setError(null)
+  setSuccess(null)
+  setProgress(0)
+
+  try {
+    // Vérifier si le projet existe
+    const checkResponse = await fetch(`/api/check-project?projectName=${encodeURIComponent(projectName)}&userId=${encryptId(parseInt(session.user.id))}`)
+    const checkResult = await checkResponse.json()
+
+    if (checkResult.exists) {
+      setShowConfirmDialog(true)
+      setIsLoading(false)
+      return
+    }
+
+    // Lancer l'upload en chunks
+    await uploadInChunks(selectedFile)
+    
+    // Une fois l'upload terminé, lancer le traitement
+    await processVideo()
+  } catch (error) {
+    setError(error instanceof Error ? error.message : 'Une erreur inconnue est survenue')
+  } finally {
+    setIsLoading(false)
+  }
+}
+
+const uploadInChunks = async (file: File) => {
+  const totalChunks = Math.ceil(file.size / CHUNK_SIZE)
+  const userId = encryptId(parseInt(session.user.id))
+  const fileId = `${userId}-${Date.now()}`
+
+  for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
+    const start = chunkIndex * CHUNK_SIZE
+    const end = Math.min(start + CHUNK_SIZE, file.size)
+    const chunk = file.slice(start, end)
+
     const formData = new FormData()
-    formData.append('file', selectedFile as File)
-    formData.append('projectName', projectName)
-    formData.append('resolution', resolution)
-    formData.append('userId', encryptId(parseInt(session.user.id)))
+    formData.append("file", chunk)
+    formData.append("fileId", fileId)
+    formData.append("chunkIndex", chunkIndex.toString())
+    formData.append("totalChunks", totalChunks.toString())
+    formData.append("projectName", projectName)
+    formData.append("resolution", resolution)
+    formData.append("userId", userId)
 
     try {
-      // First, upload the file
-      const uploadResponse = await fetch('/api/upload', {
-        method: 'POST',
+      const response = await fetch("/api/upload-chunks", {
+        method: "POST",
         body: formData,
       })
 
-      if (!uploadResponse.ok) {
-        throw new Error('Erreur lors du téléchargement du fichier')
+      if (!response.ok) {
+        throw new Error(`Échec de l'envoi du chunk ${chunkIndex}`)
       }
 
-      // Then, add to processing queue
-      const processResponse = await fetch('/api/process-video', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-          projectName, 
-          resolution,
-          userId: encryptId(parseInt(session.user.id))
-        }),
-      })
-
-      const result = await processResponse.json()
-
-      if (processResponse.ok) {
-        setSuccess(`La vidéo a été ajoutée à la file d'attente pour traitement. ID de la tâche : ${result.queueId}`)
-        await refreshProjects()  // Refresh the projects list
-      } else {
-        throw new Error(result.message || 'Une erreur est survenue lors de l\'ajout à la file d\'attente')
-      }
+      setProgress(((chunkIndex + 1) / totalChunks) * 100)
     } catch (error) {
-      setError(error instanceof Error ? error.message : 'Une erreur inconnue est survenue')
-    } finally {
-      setIsLoading(false)
-      setShowConfirmDialog(false)
+      throw new Error(`Erreur lors de l'upload : ${error instanceof Error ? error.message : error}`)
     }
   }
+
+  // Une fois tous les chunks envoyés, demander l'assemblage
+  await mergeChunks(fileId)
+}
+
+const mergeChunks = async (fileId: string) => {
+  try {
+    const mergeResponse = await fetch("/api/merge-chunks", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ fileId, projectName, resolution, userId: encryptId(parseInt(session.user.id)) }),
+    })
+
+    if (!mergeResponse.ok) {
+      throw new Error("Échec de l'assemblage du fichier.")
+    }
+
+    setSuccess("Vidéo uploadée avec succès !")
+  } catch (error) {
+    setError(`Erreur d'assemblage : ${error instanceof Error ? error.message : error}`)
+    throw error
+  }
+}
+
+const processVideo = async () => {
+  try {
+    const processResponse = await fetch('/api/process-video', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        projectName, 
+        resolution,
+        userId: encryptId(parseInt(session.user.id))
+      }),
+    })
+
+    const result = await processResponse.json()
+
+    if (!processResponse.ok) {
+      throw new Error(result.message || 'Une erreur est survenue lors de l\'ajout à la file d\'attente')
+    }
+
+    setSuccess(`La vidéo a été ajoutée à la file d'attente pour traitement. ID de la tâche : ${result.queueId}`)
+    await refreshProjects()
+  } catch (error) {
+    setError(error instanceof Error ? error.message : 'Une erreur inconnue est survenue')
+  }
+}
+
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
@@ -236,7 +284,7 @@ export default function HomePage() {
           </DialogHeader>
           <DialogFooter>
             <Button variant="outline" onClick={() => setShowConfirmDialog(false)}>Annuler</Button>
-            <Button onClick={uploadAndProcess}>Confirmer</Button>
+        
           </DialogFooter>
         </DialogContent>
       </Dialog>
