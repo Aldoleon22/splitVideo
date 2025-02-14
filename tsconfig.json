@@ -27,7 +27,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "queue-worker.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "queue-worker.js", "workers/videoProcessor.js"],
   "exclude": [
     "node_modules",
     "src/app/api/job-status/[id]/route.ts",

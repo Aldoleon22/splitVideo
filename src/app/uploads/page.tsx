@@ -1,67 +1,79 @@
-import React, { useState } from 'react';
-import { IoMdCloudUpload } from 'react-icons/io'; // Icône pour l'upload
-import { Header } from "@/components/Header"
-import { Sidebar } from "@/components/Sidebar"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"; // Assure-toi que ce chemin est correct
+"use client"
 
-// Exemple de type pour la tâche
-interface Task {
+import React, { useEffect, useState } from 'react';
+import { Header } from "@/components/Header";
+import { Sidebar } from "@/components/Sidebar";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
+// Définition du type pour une vidéo traitée
+interface ProcessedVideo {
   id: number;
   projectName: string;
   resolution: string;
-  progress: number; // Progression entre 0 et 100
+  progress: number; // De 0 à 100
   createdAt: string;
+  processedFileUrl: string; // URL du fichier traité
 }
 
 const UploadsPage = () => {
-  // Données fictives pour les tâches
-  const tasks: Task[] = [
-    { id: 1, projectName: 'Projet A', resolution: 'Résolution A', progress: 30, createdAt: '2025-02-11T10:00:00' },
-    { id: 2, projectName: 'Projet B', resolution: 'Résolution B', progress: 50, createdAt: '2025-02-11T12:00:00' },
-    { id: 3, projectName: 'Projet C', resolution: 'Résolution C', progress: 99, createdAt: '2025-02-11T14:00:00' }
-  ];
+  const [videos, setVideos] = useState<ProcessedVideo[]>([]);
+
+  // Fonction pour récupérer les vidéos depuis le backend
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const response = await fetch('/api/test'); // 🔹 Assure-toi que cette API existe
+        const data = await response.json();
+        setVideos(data);
+      } catch (error) {
+        console.error('Erreur lors de la récupération des vidéos traitées:', error);
+      }
+    };
+
+    fetchVideos();
+  }, []);
 
   return (
- <div className="min-h-screen bg-gray-900 text-gray-100">
-       <Header />
-       <div className="flex">
-         <Sidebar />
-    
-         <Table>
-    <TableHeader>
-      <TableRow>
-        <TableHead>Projet</TableHead>
-        <TableHead>Résolution</TableHead>
-        <TableHead>Progression</TableHead>
-        <TableHead>Créé le</TableHead>
-      </TableRow>
-    </TableHeader>
-    <TableBody>
-      {tasks.map((task) => (
-        <TableRow key={task.id}>
-          <TableCell>{task.projectName}</TableCell>
-          <TableCell>{task.resolution}</TableCell>
-          <TableCell>
-            <div className="w-full">
-              <progress
-                className="w-full h-2 rounded-lg"
-                value={task.progress}
-                max={100}
-              />
-            
-            </div>
-          </TableCell>
-          <TableCell>{new Date(task.createdAt).toLocaleString()}</TableCell>
-        </TableRow>
-      ))}
-    </TableBody>
-  </Table>
+    <div className="min-h-screen bg-gray-900 text-gray-100">
+      <Header />
+      <div className="flex">
+        <Sidebar />
 
-       </div>
-       </div>
-
-     
-   )
-}
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Projet</TableHead>
+              <TableHead>Résolution</TableHead>
+              <TableHead>Progression</TableHead>
+              <TableHead>Créé le</TableHead>
+              <TableHead>Vidéo Traitée</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {videos.map((video) => (
+              <TableRow key={video.id}>
+                <TableCell>{video.projectName}</TableCell>
+                <TableCell>{video.resolution}</TableCell>
+                <TableCell>
+                  <progress className="w-full h-2 rounded-lg" value={video.progress} max={100} />
+                </TableCell>
+                <TableCell>{new Date(video.createdAt).toLocaleString()}</TableCell>
+                <TableCell>
+                  {video.progress === 100 ? (
+                    <a href={video.processedFileUrl} download className="text-blue-400 hover:underline">
+                      Télécharger
+                    </a>
+                  ) : (
+                    "En cours..."
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  );
+};
 
 export default UploadsPage;
