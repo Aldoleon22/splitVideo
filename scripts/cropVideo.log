@@ -87,3 +87,475 @@ ModuleNotFoundError: No module named 'scenedetect'
 ModuleNotFoundError: No module named 'scenedetect'
 
 2025-02-18 10:27:51 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\nModuleNotFoundError: No module named 'scenedetect'\n"}
+2025-02-18 10:32:53 - Début du script cropVideo.php
+2025-02-18 10:32:53 - Arguments reçus: userId=00056, projectName=tetssss, resolution=original
+2025-02-18 10:32:53 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss
+2025-02-18 10:32:53 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssss
+2025-02-18 10:32:53 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss
+2025-02-18 10:32:53 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssss' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss' 'tetssss' 'original'
+2025-02-18 10:32:53 - Sortie de la commande Python: Traceback (most recent call last):
+  File "/home/aldo/Documents/splitVideo/scripts/crop_video.py", line 4, in <module>
+    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg
+ModuleNotFoundError: No module named 'scenedetect'
+
+2025-02-18 10:32:53 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\nModuleNotFoundError: No module named 'scenedetect'\n"}
+2025-02-18 10:32:53 - Début du script cropVideo.php
+2025-02-18 10:32:53 - Arguments reçus: userId=00056, projectName=tetssss, resolution=original
+2025-02-18 10:32:53 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssss
+2025-02-18 10:32:53 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss
+2025-02-18 10:32:53 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssss' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss' 'tetssss' 'original'
+2025-02-18 10:32:53 - Sortie de la commande Python: Traceback (most recent call last):
+  File "/home/aldo/Documents/splitVideo/scripts/crop_video.py", line 4, in <module>
+    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg
+ModuleNotFoundError: No module named 'scenedetect'
+
+2025-02-18 10:32:53 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\nModuleNotFoundError: No module named 'scenedetect'\n"}
+2025-02-18 10:38:21 - Début du script cropVideo.php
+2025-02-18 10:38:21 - Arguments reçus: userId=00056, projectName=tetssssddd, resolution=original
+2025-02-18 10:38:21 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd
+2025-02-18 10:38:21 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssddd
+2025-02-18 10:38:21 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd
+2025-02-18 10:38:21 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssddd' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd' 'tetssssddd' 'original'
+2025-02-18 10:38:21 - Sortie de la commande Python: Traceback (most recent call last):
+  File "/home/aldo/.local/lib/python3.8/site-packages/scenedetect/__init__.py", line 25, in <module>
+    import cv2 as _
+ModuleNotFoundError: No module named 'cv2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aldo/Documents/splitVideo/scripts/crop_video.py", line 4, in <module>
+    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg
+  File "/home/aldo/.local/lib/python3.8/site-packages/scenedetect/__init__.py", line 27, in <module>
+    raise ModuleNotFoundError(
+ModuleNotFoundError: OpenCV could not be found, try installing opencv-python:
+
+pip install opencv-python
+
+2025-02-18 10:38:21 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 25, in <module>\n    import cv2 as _\nModuleNotFoundError: No module named 'cv2'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 27, in <module>\n    raise ModuleNotFoundError(\nModuleNotFoundError: OpenCV could not be found, try installing opencv-python:\n\npip install opencv-python\n"}
+2025-02-18 10:38:21 - Début du script cropVideo.php
+2025-02-18 10:38:21 - Arguments reçus: userId=00056, projectName=tetssssddd, resolution=original
+2025-02-18 10:38:21 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssddd
+2025-02-18 10:38:21 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd
+2025-02-18 10:38:21 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssddd' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd' 'tetssssddd' 'original'
+2025-02-18 10:38:22 - Sortie de la commande Python: Traceback (most recent call last):
+  File "/home/aldo/.local/lib/python3.8/site-packages/scenedetect/__init__.py", line 25, in <module>
+    import cv2 as _
+ModuleNotFoundError: No module named 'cv2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aldo/Documents/splitVideo/scripts/crop_video.py", line 4, in <module>
+    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg
+  File "/home/aldo/.local/lib/python3.8/site-packages/scenedetect/__init__.py", line 27, in <module>
+    raise ModuleNotFoundError(
+ModuleNotFoundError: OpenCV could not be found, try installing opencv-python:
+
+pip install opencv-python
+
+2025-02-18 10:38:22 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 25, in <module>\n    import cv2 as _\nModuleNotFoundError: No module named 'cv2'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 27, in <module>\n    raise ModuleNotFoundError(\nModuleNotFoundError: OpenCV could not be found, try installing opencv-python:\n\npip install opencv-python\n"}
+2025-02-18 10:45:07 - Début du script cropVideo.php
+2025-02-18 10:45:07 - Arguments reçus: userId=00056, projectName=tetssssdddfffff, resolution=original
+2025-02-18 10:45:07 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
+2025-02-18 10:45:07 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
+2025-02-18 10:45:07 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
+2025-02-18 10:45:07 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff' 'tetssssdddfffff' 'original'
+2025-02-18 10:45:08 - Sortie de la commande Python: 2025-02-18 11:45:08,558 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
+2025-02-18 11:45:08,558 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
+2025-02-18 11:45:08,559 - INFO - Project name: tetssssdddfffff
+2025-02-18 11:45:08,559 - INFO - Resolution: original
+2025-02-18 11:45:08,559 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff/PARISH - EFA JANGA (Officiel Video).mp4
+[av1 @ 0x11a7bc0] Your platform doesn't suppport hardware accelerated AV1 decoding.
+[av1 @ 0x11a7bc0] Failed to get pixel format.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11a7bc0] Missing Sequence Header.
+[av1 @ 0x11ab300] Your platform doesn't suppport hardware accelerated AV1 decoding.
+[av1 @ 0x11ab300] Failed to get pixel format.
+2025-02-18 11:45:08,574 - INFO - Detecting scenes...
+[av1 @ 0x11ab300] Missing Sequence Header.
+[av1 @ 0x11ab300] Missing Sequence Header.
+[av1 @ 0x11ab300] Missing Sequence Header.
+[av1 @ 0x11ab300] Missing Sequence Header.
+[av1 @ 0x11ab300] Missing Sequence Header.
+[av1 @ 0x11ab300] Missing Sequence Header.
+2025-02-18 11:45:08,575 - INFO - Detected 0 scenes
+2025-02-18 11:45:08,576 - WARNING - No scenes detected in the video.
+Warning: No scenes detected in the video.
+2025-02-18 11:45:08,576 - INFO - Files in output folder: 
+
+2025-02-18 10:45:08 - Sortie JSON: {"success":false,"message":"Aucun fichier g\u00e9n\u00e9r\u00e9 dans le dossier de sortie."}
+2025-02-18 10:45:08 - Début du script cropVideo.php
+2025-02-18 10:45:08 - Arguments reçus: userId=00056, projectName=tetssssdddfffff, resolution=original
+2025-02-18 10:45:08 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
+2025-02-18 10:45:08 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
+2025-02-18 10:45:08 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff' 'tetssssdddfffff' 'original'
+2025-02-18 10:45:09 - Sortie de la commande Python: 2025-02-18 11:45:09,028 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
+2025-02-18 11:45:09,028 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
+2025-02-18 11:45:09,028 - INFO - Project name: tetssssdddfffff
+2025-02-18 11:45:09,028 - INFO - Resolution: original
+2025-02-18 11:45:09,028 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff/PARISH - EFA JANGA (Officiel Video).mp4
+[av1 @ 0x155fbc0] Your platform doesn't suppport hardware accelerated AV1 decoding.
+[av1 @ 0x155fbc0] Failed to get pixel format.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x155fbc0] Missing Sequence Header.
+[av1 @ 0x1563300] Your platform doesn't suppport hardware accelerated AV1 decoding.
+[av1 @ 0x1563300] Failed to get pixel format.
+2025-02-18 11:45:09,040 - INFO - Detecting scenes...
+[av1 @ 0x1563300] Missing Sequence Header.
+[av1 @ 0x1563300] Missing Sequence Header.
+[av1 @ 0x1563300] Missing Sequence Header.
+[av1 @ 0x1563300] Missing Sequence Header.
+[av1 @ 0x1563300] Missing Sequence Header.
+[av1 @ 0x1563300] Missing Sequence Header.
+2025-02-18 11:45:09,041 - INFO - Detected 0 scenes
+2025-02-18 11:45:09,041 - WARNING - No scenes detected in the video.
+Warning: No scenes detected in the video.
+2025-02-18 11:45:09,041 - INFO - Files in output folder: 
+
+2025-02-18 10:45:09 - Sortie JSON: {"success":false,"message":"Aucun fichier g\u00e9n\u00e9r\u00e9 dans le dossier de sortie."}
+2025-02-18 10:46:05 - Début du script cropVideo.php
+2025-02-18 10:46:05 - Arguments reçus: userId=00056, projectName=ejrjue, resolution=original
+2025-02-18 10:46:05 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 10:46:05 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
+2025-02-18 10:46:05 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 10:46:05 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue' 'ejrjue' 'original'
+2025-02-18 10:46:17 - Sortie de la commande Python: 2025-02-18 11:46:05,748 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
+2025-02-18 11:46:05,748 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 11:46:05,748 - INFO - Project name: ejrjue
+2025-02-18 11:46:05,749 - INFO - Resolution: original
+2025-02-18 11:46:05,749 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue/video.mp4
+2025-02-18 11:46:05,761 - INFO - Detecting scenes...
+2025-02-18 11:46:07,585 - INFO - Detected 21 scenes
+2025-02-18 11:46:07,585 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-18 11:46:07,586 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:09, 58.88frame/s] 13%|█▎        | 78/618 [00:01<00:07, 71.36frame/s] 17%|█▋        | 108/618 [00:01<00:06, 78.95frame/s] 22%|██▏       | 138/618 [00:01<00:06, 73.99frame/s] 27%|██▋       | 168/618 [00:02<00:06, 71.52frame/s] 30%|██▉       | 185/618 [00:02<00:06, 70.44frame/s] 32%|███▏      | 198/618 [00:02<00:06, 63.49frame/s] 37%|███▋      | 228/618 [00:03<00:06, 58.00frame/s] 42%|████▏     | 258/618 [00:04<00:06, 52.77frame/s] 47%|████▋     | 288/618 [00:04<00:06, 49.85frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 52.50frame/s] 56%|█████▋    | 348/618 [00:05<00:05, 53.73frame/s] 61%|██████    | 378/618 [00:06<00:04, 54.71frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 53.05frame/s] 71%|███████   | 438/618 [00:07<00:03, 53.79frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 57.32frame/s] 81%|████████  | 498/618 [00:08<00:02, 59.33frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 57.39frame/s] 90%|█████████ | 558/618 [00:09<00:00, 63.67frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 67.18frame/s]100%|██████████| 618/618 [00:10<00:00, 66.24frame/s]100%|██████████| 618/618 [00:10<00:00, 60.57frame/s]2025-02-18 11:46:17,804 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 11:46:17,804 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-016.mp4, video-Scene-018.mp4, video-Scene-001.mp4, video-Scene-004.mp4, video-Scene-007.mp4, video-Scene-009.mp4, video-Scene-017.mp4, video-Scene-021.mp4, video-Scene-003.mp4, video-Scene-010.mp4, video-Scene-002.mp4, video-Scene-015.mp4, video-Scene-011.mp4, video-Scene-005.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-008.mp4, video-Scene-006.mp4, video-Scene-020.mp4, video-Scene-014.mp4
+
+
+2025-02-18 10:46:17 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-18 10:46:17 - Début du script cropVideo.php
+2025-02-18 10:46:17 - Arguments reçus: userId=00056, projectName=ejrjue, resolution=original
+2025-02-18 10:46:17 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
+2025-02-18 10:46:17 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 10:46:17 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue' 'ejrjue' 'original'
+2025-02-18 10:46:30 - Sortie de la commande Python: 2025-02-18 11:46:18,256 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
+2025-02-18 11:46:18,256 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 11:46:18,256 - INFO - Project name: ejrjue
+2025-02-18 11:46:18,256 - INFO - Resolution: original
+2025-02-18 11:46:18,256 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue/video.mp4
+2025-02-18 11:46:18,274 - INFO - Detecting scenes...
+2025-02-18 11:46:20,069 - INFO - Detected 21 scenes
+2025-02-18 11:46:20,069 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-18 11:46:20,069 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:07, 76.05frame/s] 13%|█▎        | 78/618 [00:00<00:06, 81.17frame/s] 17%|█▋        | 108/618 [00:01<00:06, 81.80frame/s] 22%|██▏       | 138/618 [00:01<00:06, 71.60frame/s] 27%|██▋       | 168/618 [00:02<00:07, 60.79frame/s] 30%|██▉       | 185/618 [00:02<00:06, 63.03frame/s] 32%|███▏      | 198/618 [00:02<00:06, 60.02frame/s] 37%|███▋      | 228/618 [00:03<00:06, 59.16frame/s] 42%|████▏     | 258/618 [00:04<00:06, 57.83frame/s] 47%|████▋     | 288/618 [00:04<00:05, 59.89frame/s] 51%|█████▏    | 318/618 [00:04<00:04, 61.72frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 61.64frame/s] 61%|██████    | 378/618 [00:05<00:03, 60.41frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 57.01frame/s] 71%|███████   | 438/618 [00:07<00:03, 57.88frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 57.34frame/s] 81%|████████  | 498/618 [00:08<00:02, 59.07frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 55.26frame/s] 90%|█████████ | 558/618 [00:09<00:00, 60.28frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 58.85frame/s]100%|██████████| 618/618 [00:10<00:00, 56.25frame/s]100%|██████████| 618/618 [00:10<00:00, 60.55frame/s]2025-02-18 11:46:30,285 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 11:46:30,286 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-016.mp4, video-Scene-018.mp4, video-Scene-001.mp4, video-Scene-004.mp4, video-Scene-007.mp4, video-Scene-009.mp4, video-Scene-017.mp4, video-Scene-021.mp4, video-Scene-003.mp4, video-Scene-010.mp4, video-Scene-002.mp4, video-Scene-015.mp4, video-Scene-011.mp4, video-Scene-005.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-008.mp4, video-Scene-006.mp4, video-Scene-020.mp4, video-Scene-014.mp4
+
+
+2025-02-18 10:46:30 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-18 10:53:02 - Début du script cropVideo.php
+2025-02-18 10:53:02 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-18 10:53:02 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-18 10:53:02 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-18 10:53:02 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-18 10:53:02 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'

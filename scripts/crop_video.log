@@ -37,3 +37,58 @@
   $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
 2025-01-31 12:36:20,406 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
 2025-01-31 12:36:20,406 - INFO - Files in output folder: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4
+2025-02-18 11:45:08,558 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
+2025-02-18 11:45:08,558 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
+2025-02-18 11:45:08,559 - INFO - Project name: tetssssdddfffff
+2025-02-18 11:45:08,559 - INFO - Resolution: original
+2025-02-18 11:45:08,559 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff/PARISH - EFA JANGA (Officiel Video).mp4
+2025-02-18 11:45:08,574 - INFO - Detecting scenes...
+2025-02-18 11:45:08,575 - INFO - Detected 0 scenes
+2025-02-18 11:45:08,576 - WARNING - No scenes detected in the video.
+2025-02-18 11:45:08,576 - INFO - Files in output folder: 
+2025-02-18 11:45:09,028 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
+2025-02-18 11:45:09,028 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
+2025-02-18 11:45:09,028 - INFO - Project name: tetssssdddfffff
+2025-02-18 11:45:09,028 - INFO - Resolution: original
+2025-02-18 11:45:09,028 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff/PARISH - EFA JANGA (Officiel Video).mp4
+2025-02-18 11:45:09,040 - INFO - Detecting scenes...
+2025-02-18 11:45:09,041 - INFO - Detected 0 scenes
+2025-02-18 11:45:09,041 - WARNING - No scenes detected in the video.
+2025-02-18 11:45:09,041 - INFO - Files in output folder: 
+2025-02-18 11:46:05,748 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
+2025-02-18 11:46:05,748 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 11:46:05,748 - INFO - Project name: ejrjue
+2025-02-18 11:46:05,749 - INFO - Resolution: original
+2025-02-18 11:46:05,749 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue/video.mp4
+2025-02-18 11:46:05,761 - INFO - Detecting scenes...
+2025-02-18 11:46:07,585 - INFO - Detected 21 scenes
+2025-02-18 11:46:07,585 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-18 11:46:07,586 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-18 11:46:17,804 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 11:46:17,804 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-016.mp4, video-Scene-018.mp4, video-Scene-001.mp4, video-Scene-004.mp4, video-Scene-007.mp4, video-Scene-009.mp4, video-Scene-017.mp4, video-Scene-021.mp4, video-Scene-003.mp4, video-Scene-010.mp4, video-Scene-002.mp4, video-Scene-015.mp4, video-Scene-011.mp4, video-Scene-005.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-008.mp4, video-Scene-006.mp4, video-Scene-020.mp4, video-Scene-014.mp4
+2025-02-18 11:46:18,256 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
+2025-02-18 11:46:18,256 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 11:46:18,256 - INFO - Project name: ejrjue
+2025-02-18 11:46:18,256 - INFO - Resolution: original
+2025-02-18 11:46:18,256 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue/video.mp4
+2025-02-18 11:46:18,274 - INFO - Detecting scenes...
+2025-02-18 11:46:20,069 - INFO - Detected 21 scenes
+2025-02-18 11:46:20,069 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-18 11:46:20,069 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-18 11:46:30,285 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
+2025-02-18 11:46:30,286 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-016.mp4, video-Scene-018.mp4, video-Scene-001.mp4, video-Scene-004.mp4, video-Scene-007.mp4, video-Scene-009.mp4, video-Scene-017.mp4, video-Scene-021.mp4, video-Scene-003.mp4, video-Scene-010.mp4, video-Scene-002.mp4, video-Scene-015.mp4, video-Scene-011.mp4, video-Scene-005.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-008.mp4, video-Scene-006.mp4, video-Scene-020.mp4, video-Scene-014.mp4
+2025-02-18 11:53:06,763 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-18 11:53:06,764 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-18 11:53:06,764 - INFO - Project name: test 1gb
+2025-02-18 11:53:06,764 - INFO - Resolution: original
+2025-02-18 11:53:06,765 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/[ Torrent911.ke ] Riverboom.2024.French.WEBRIP.mp4
+2025-02-18 11:53:06,920 - INFO - Detecting scenes...
+2025-02-18 11:57:44,971 - INFO - Detected 764 scenes
+2025-02-18 11:57:44,971 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-18 11:57:44,972 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
