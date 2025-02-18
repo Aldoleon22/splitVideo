@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start -p 3021",
     "lint": "next lint",
-    "queue-worker": "node w/queue-worker.js",
+    "queue-worker": "node workers/queue-worker.js",
     "start:pm2": "pm2 start ecosystem.config.cjs",
     "start:worker": "node workers/videoProcessor.js",
     "ngrok": "ngrok http 3000"

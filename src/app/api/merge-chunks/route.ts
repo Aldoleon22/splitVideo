@@ -3,17 +3,19 @@ import fs from "fs"
 import path from "path"
 
 export async function POST(req: NextRequest) {
-  const { fileId, projectName, resolution, userId } = await req.json()
+  const { fileId, projectName, resolution, userId, originalFileName } = await req.json()
 
-  if (!fileId || !projectName || !resolution || !userId) {
+  if (!fileId || !projectName || !resolution || !userId || !originalFileName) {
+    console.error("Missing required fields:", { fileId, projectName, resolution, userId, originalFileName })
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
   }
 
   const uploadsDir = path.join(process.cwd(), "uploads", userId, fileId)
-  const outputDir = path.join(process.cwd(), "projets", userId, 'uploaded_videos',projectName)
+  const outputDir = path.join(process.cwd(), "projets", userId, 'uploaded_videos', projectName)
+  console.log(`Creating directory at ${outputDir}`)
   fs.mkdirSync(outputDir, { recursive: true })
 
-  const outputFile = path.join(outputDir, `${fileId}.mp4`)
+  const outputFile = path.join(outputDir, originalFileName) // Utiliser le nom original
   const writeStream = fs.createWriteStream(outputFile)
 
   try {
@@ -21,8 +23,11 @@ export async function POST(req: NextRequest) {
       return Number.parseInt(a.split("-")[1]) - Number.parseInt(b.split("-")[1])
     })
 
+    console.log(`Merging chunks from ${uploadsDir} into ${outputFile}`)
+
     for (const file of files) {
       const chunkPath = path.join(uploadsDir, file)
+      console.log(`Writing chunk: ${chunkPath}`)
       const chunkContent = fs.readFileSync(chunkPath)
       writeStream.write(chunkContent)
       fs.unlinkSync(chunkPath)
@@ -30,10 +35,11 @@ export async function POST(req: NextRequest) {
 
     writeStream.end()
 
+    // Delete the directory after processing
+    console.log(`Removing uploads directory: ${uploadsDir}`)
     fs.rmdirSync(uploadsDir)
 
-    // Here you would typically process the video (e.g., change resolution)
-    // For now, we'll just simulate this step
+    // Traitement de la vidéo (par exemple, modification de la résolution)
     console.log(`Processing video: ${outputFile} with resolution: ${resolution}`)
 
     return NextResponse.json({ message: "File merged successfully" })
@@ -42,4 +48,3 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Failed to merge chunks" }, { status: 500 })
   }
 }
-

@@ -92,10 +92,13 @@ const handleImport = async () => {
   }
 }
 
+
 const uploadInChunks = async (file: File) => {
   const totalChunks = Math.ceil(file.size / CHUNK_SIZE)
   const userId = encryptId(parseInt(session.user.id))
   const fileId = `${userId}-${Date.now()}`
+  const originalFileName = file.name // Nom du fichier original
+  let uploadSuccess = true
 
   for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
     const start = chunkIndex * CHUNK_SIZE
@@ -110,6 +113,7 @@ const uploadInChunks = async (file: File) => {
     formData.append("projectName", projectName)
     formData.append("resolution", resolution)
     formData.append("userId", userId)
+    formData.append("originalFileName", originalFileName) // Nom original
 
     try {
       const response = await fetch("/api/upload-chunks", {
@@ -123,20 +127,28 @@ const uploadInChunks = async (file: File) => {
 
       setProgress(((chunkIndex + 1) / totalChunks) * 100)
     } catch (error) {
-      throw new Error(`Erreur lors de l'upload : ${error instanceof Error ? error.message : error}`)
+      console.error(`Erreur lors de l'upload du chunk ${chunkIndex}:`, error)
+      uploadSuccess = false
+      break // Vous pouvez aussi choisir de réessayer ici ou continuer avec des retries
     }
   }
 
-  // Une fois tous les chunks envoyés, demander l'assemblage
-  await mergeChunks(fileId)
+  if (uploadSuccess) {
+    // Une fois tous les chunks envoyés, demander l'assemblage
+    await mergeChunks(fileId, originalFileName) // Passer le nom original
+    await processVideo()
+  } else {
+    console.error('L\'upload a échoué, veuillez réessayer plus tard.')
+  }
 }
 
-const mergeChunks = async (fileId: string) => {
+
+const mergeChunks = async (fileId: string, originalFileName: string) => {
   try {
     const mergeResponse = await fetch("/api/merge-chunks", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ fileId, projectName, resolution, userId: encryptId(parseInt(session.user.id)) }),
+      body: JSON.stringify({ fileId, projectName, resolution, userId: encryptId(parseInt(session.user.id)), originalFileName }), // Passer le nom original
     })
 
     if (!mergeResponse.ok) {
@@ -149,6 +161,7 @@ const mergeChunks = async (fileId: string) => {
     throw error
   }
 }
+
 
 const processVideo = async () => {
   try {
@@ -284,11 +297,10 @@ const processVideo = async () => {
           </DialogHeader>
           <DialogFooter>
             <Button variant="outline" onClick={() => setShowConfirmDialog(false)}>Annuler</Button>
-        
+            <Button onClick={async () => {setShowConfirmDialog(false), await uploadInChunks(selectedFile!) }}>Confirmer</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>
   )
 }
-

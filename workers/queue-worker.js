@@ -1,10 +1,10 @@
-import videoQueue from './src/lib/queue.js';
-import prisma from './src/lib/prisma.js';
+import videoQueue from '../src/lib/queue.js';
+import prisma from '../src/lib/prisma.js';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { decryptId } from './src/utils/cryptoUtils.js';
+import { decryptId } from '../src/utils/cryptoUtils.js';
 
 const execAsync = promisify(exec);
 const __filename = fileURLToPath(import.meta.url);
