@@ -96,13 +96,8 @@ export function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem>
-                <Link href="/uploads" className="flex items-center text-gray-300 hover:text-white">
-                  <IoMdCloudUpload className="mr-2 h-4 w-4" />
-                  <span>Uploads</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
+               
+        
                 <DropdownMenuItem>
                   <Link href="/tasks" className="flex items-center text-gray-300 hover:text-white">
                     <IoIosNotifications className="mr-2 h-4 w-4" />

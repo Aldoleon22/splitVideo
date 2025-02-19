@@ -1,122 +1,33 @@
-2025-01-25 14:34:07 - Début du script cropVideo.php
-2025-01-25 14:34:07 - Arguments reçus: userId=00007, projectName=surfing, resolution=original
-2025-01-25 14:34:07 - Directory created: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
-2025-01-25 14:34:07 - Dossier d'entrée: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing
-2025-01-25 14:34:07 - Dossier de sortie: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
-2025-01-25 14:34:07 - Commande à exécuter: python3 /Users/livahandrianome/Sites/www/splitVideo/scripts/crop_video.py '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing' '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing' 'surfing' 'original'
-2025-01-25 14:34:27 - Sortie de la commande Python: 2025-01-25 17:34:25,579 - INFO - Input folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing
-2025-01-25 17:34:25,579 - INFO - Output folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
-2025-01-25 17:34:25,579 - INFO - Project name: surfing
-2025-01-25 17:34:25,579 - INFO - Resolution: original
-2025-01-25 17:34:25,579 - INFO - Processing file: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/surfing/final_video (1).mp4
-2025-01-25 17:34:25,592 - INFO - Detecting scenes...
-2025-01-25 17:34:25,855 - INFO - Detected 6 scenes
-2025-01-25 17:34:25,855 - INFO - Splitting video with ffmpeg, output path template:
-  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-2025-01-25 17:34:25,855 - INFO - Output folder:
-  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-  0%|          | 0/198 [00:00<?, ?frame/s] 15%|█▌        | 30/198 [00:00<00:01, 144.10frame/s] 30%|███       | 60/198 [00:00<00:01, 125.12frame/s] 55%|█████▍    | 108/198 [00:00<00:00, 142.26frame/s] 70%|██████▉   | 138/198 [00:00<00:00, 150.97frame/s] 85%|████████▍ | 168/198 [00:01<00:00, 160.39frame/s]100%|██████████| 198/198 [00:01<00:00, 165.87frame/s]100%|██████████| 198/198 [00:01<00:00, 154.81frame/s]
-2025-01-25 17:34:27,205 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/surfing
-2025-01-25 17:34:27,205 - INFO - Files in output folder: final_video (1)-Scene-006.mp4, final_video (1)-Scene-005.mp4, final_video (1)-Scene-004.mp4, final_video (1)-Scene-001.mp4, final_video (1)-Scene-003.mp4, final_video (1)-Scene-002.mp4
-
-2025-01-25 14:34:27 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: final_video (1)-Scene-001.mp4, final_video (1)-Scene-002.mp4, final_video (1)-Scene-003.mp4, final_video (1)-Scene-004.mp4, final_video (1)-Scene-005.mp4, final_video (1)-Scene-006.mp4"}
-2025-01-25 23:58:23 - Début du script cropVideo.php
-2025-01-25 23:58:23 - Arguments reçus: userId=00007, projectName=test, resolution=original
-2025-01-25 23:58:23 - Directory created: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
-2025-01-25 23:58:23 - Dossier d'entrée: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test
-2025-01-25 23:58:23 - Dossier de sortie: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
-2025-01-25 23:58:23 - Commande à exécuter: python3 /Users/livahandrianome/Sites/www/splitVideo/scripts/crop_video.py '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test' '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test' 'test' 'original'
-2025-01-25 23:58:28 - Sortie de la commande Python: 2025-01-26 02:58:26,745 - INFO - Input folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test
-2025-01-26 02:58:26,746 - INFO - Output folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
-2025-01-26 02:58:26,746 - INFO - Project name: test
-2025-01-26 02:58:26,746 - INFO - Resolution: original
-2025-01-26 02:58:26,746 - INFO - Processing file: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/test/0118 (1)(1).mp4
-2025-01-26 02:58:26,760 - INFO - Detecting scenes...
-2025-01-26 02:58:27,029 - INFO - Detected 2 scenes
-2025-01-26 02:58:27,029 - INFO - Splitting video with ffmpeg, output path template:
-  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-2025-01-26 02:58:27,029 - INFO - Output folder:
-  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-  0%|          | 0/121 [00:00<?, ?frame/s] 16%|█▌        | 19/121 [00:00<00:01, 94.85frame/s]100%|██████████| 121/121 [00:00<00:00, 142.24frame/s]100%|██████████| 121/121 [00:00<00:00, 138.85frame/s]
-2025-01-26 02:58:27,989 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/test
-2025-01-26 02:58:27,990 - INFO - Files in output folder: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4
-
-2025-01-25 23:58:28 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4"}
-2025-01-31 09:36:11 - Début du script cropVideo.php
-2025-01-31 09:36:11 - Arguments reçus: userId=00007, projectName=szer, resolution=original
-2025-01-31 09:36:11 - Directory created: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
-2025-01-31 09:36:11 - Dossier d'entrée: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer
-2025-01-31 09:36:11 - Dossier de sortie: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
-2025-01-31 09:36:11 - Commande à exécuter: python3 /Users/livahandrianome/Sites/www/splitVideo/scripts/crop_video.py '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer' '/Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer' 'szer' 'original'
-2025-01-31 09:36:20 - Sortie de la commande Python: 2025-01-31 12:36:19,329 - INFO - Input folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer
-2025-01-31 12:36:19,329 - INFO - Output folder: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
-2025-01-31 12:36:19,329 - INFO - Project name: szer
-2025-01-31 12:36:19,330 - INFO - Resolution: original
-2025-01-31 12:36:19,330 - INFO - Processing file: /Users/livahandrianome/Sites/www/splitVideo/projets/00007/uploaded_videos/szer/0118 (1)(1).mp4
-2025-01-31 12:36:19,344 - INFO - Detecting scenes...
-2025-01-31 12:36:19,583 - INFO - Detected 2 scenes
-2025-01-31 12:36:19,583 - INFO - Splitting video with ffmpeg, output path template:
-  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-2025-01-31 12:36:19,583 - INFO - Output folder:
-  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-  0%|          | 0/121 [00:00<?, ?frame/s] 16%|█▌        | 19/121 [00:00<00:01, 64.78frame/s]100%|██████████| 121/121 [00:00<00:00, 179.41frame/s]100%|██████████| 121/121 [00:00<00:00, 165.49frame/s]
-2025-01-31 12:36:20,406 - INFO - Video successfully processed and saved in /Users/livahandrianome/Sites/www/splitVideo/projets/00007/processed_videos/szer
-2025-01-31 12:36:20,406 - INFO - Files in output folder: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4
-
-2025-01-31 09:36:20 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: 0118 (1)(1)-Scene-001.mp4, 0118 (1)(1)-Scene-002.mp4"}
-2025-02-18 10:27:51 - Début du script cropVideo.php
-2025-02-18 10:27:51 - Arguments reçus: userId=00056, projectName=test1, resolution=original
-2025-02-18 10:27:51 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test1
-2025-02-18 10:27:51 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test1
-2025-02-18 10:27:51 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test1
-2025-02-18 10:27:51 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test1' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test1' 'test1' 'original'
-2025-02-18 10:27:51 - Sortie de la commande Python: Traceback (most recent call last):
+2025-02-19 14:42:06 - Début du script cropVideo.php
+2025-02-19 14:42:06 - Arguments reçus: userId=00056, projectName=test c, resolution=original
+2025-02-19 14:42:06 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test c
+2025-02-19 14:42:06 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test c
+2025-02-19 14:42:06 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test c
+2025-02-19 14:42:06 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test c' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test c' 'test c' 'original'
+2025-02-19 14:42:06 - Sortie de la commande Python: Traceback (most recent call last):
   File "/home/aldo/Documents/splitVideo/scripts/crop_video.py", line 4, in <module>
     from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg
 ModuleNotFoundError: No module named 'scenedetect'
 
-2025-02-18 10:27:51 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\nModuleNotFoundError: No module named 'scenedetect'\n"}
-2025-02-18 10:27:51 - Début du script cropVideo.php
-2025-02-18 10:27:51 - Arguments reçus: userId=00056, projectName=test1, resolution=original
-2025-02-18 10:27:51 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test1
-2025-02-18 10:27:51 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test1
-2025-02-18 10:27:51 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test1' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test1' 'test1' 'original'
-2025-02-18 10:27:51 - Sortie de la commande Python: Traceback (most recent call last):
+2025-02-19 14:42:06 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\nModuleNotFoundError: No module named 'scenedetect'\n"}
+2025-02-19 14:42:06 - Début du script cropVideo.php
+2025-02-19 14:42:06 - Arguments reçus: userId=00056, projectName=test c, resolution=original
+2025-02-19 14:42:06 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test c
+2025-02-19 14:42:06 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test c
+2025-02-19 14:42:06 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test c' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test c' 'test c' 'original'
+2025-02-19 14:42:07 - Sortie de la commande Python: Traceback (most recent call last):
   File "/home/aldo/Documents/splitVideo/scripts/crop_video.py", line 4, in <module>
     from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg
 ModuleNotFoundError: No module named 'scenedetect'
 
-2025-02-18 10:27:51 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\nModuleNotFoundError: No module named 'scenedetect'\n"}
-2025-02-18 10:32:53 - Début du script cropVideo.php
-2025-02-18 10:32:53 - Arguments reçus: userId=00056, projectName=tetssss, resolution=original
-2025-02-18 10:32:53 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss
-2025-02-18 10:32:53 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssss
-2025-02-18 10:32:53 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss
-2025-02-18 10:32:53 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssss' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss' 'tetssss' 'original'
-2025-02-18 10:32:53 - Sortie de la commande Python: Traceback (most recent call last):
-  File "/home/aldo/Documents/splitVideo/scripts/crop_video.py", line 4, in <module>
-    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg
-ModuleNotFoundError: No module named 'scenedetect'
-
-2025-02-18 10:32:53 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\nModuleNotFoundError: No module named 'scenedetect'\n"}
-2025-02-18 10:32:53 - Début du script cropVideo.php
-2025-02-18 10:32:53 - Arguments reçus: userId=00056, projectName=tetssss, resolution=original
-2025-02-18 10:32:53 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssss
-2025-02-18 10:32:53 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss
-2025-02-18 10:32:53 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssss' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssss' 'tetssss' 'original'
-2025-02-18 10:32:53 - Sortie de la commande Python: Traceback (most recent call last):
-  File "/home/aldo/Documents/splitVideo/scripts/crop_video.py", line 4, in <module>
-    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg
-ModuleNotFoundError: No module named 'scenedetect'
-
-2025-02-18 10:32:53 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\nModuleNotFoundError: No module named 'scenedetect'\n"}
-2025-02-18 10:38:21 - Début du script cropVideo.php
-2025-02-18 10:38:21 - Arguments reçus: userId=00056, projectName=tetssssddd, resolution=original
-2025-02-18 10:38:21 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd
-2025-02-18 10:38:21 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssddd
-2025-02-18 10:38:21 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd
-2025-02-18 10:38:21 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssddd' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd' 'tetssssddd' 'original'
-2025-02-18 10:38:21 - Sortie de la commande Python: Traceback (most recent call last):
+2025-02-19 14:42:07 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\nModuleNotFoundError: No module named 'scenedetect'\n"}
+2025-02-19 14:46:29 - Début du script cropVideo.php
+2025-02-19 14:46:29 - Arguments reçus: userId=00056, projectName=testAZA, resolution=original
+2025-02-19 14:46:29 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZA
+2025-02-19 14:46:29 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZA
+2025-02-19 14:46:29 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZA
+2025-02-19 14:46:29 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZA' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZA' 'testAZA' 'original'
+2025-02-19 14:46:29 - Sortie de la commande Python: Traceback (most recent call last):
   File "/home/aldo/.local/lib/python3.8/site-packages/scenedetect/__init__.py", line 25, in <module>
     import cv2 as _
 ModuleNotFoundError: No module named 'cv2'
@@ -132,13 +43,13 @@ ModuleNotFoundError: OpenCV could not be found, try installing opencv-python:
 
 pip install opencv-python
 
-2025-02-18 10:38:21 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 25, in <module>\n    import cv2 as _\nModuleNotFoundError: No module named 'cv2'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 27, in <module>\n    raise ModuleNotFoundError(\nModuleNotFoundError: OpenCV could not be found, try installing opencv-python:\n\npip install opencv-python\n"}
-2025-02-18 10:38:21 - Début du script cropVideo.php
-2025-02-18 10:38:21 - Arguments reçus: userId=00056, projectName=tetssssddd, resolution=original
-2025-02-18 10:38:21 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssddd
-2025-02-18 10:38:21 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd
-2025-02-18 10:38:21 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssddd' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssddd' 'tetssssddd' 'original'
-2025-02-18 10:38:22 - Sortie de la commande Python: Traceback (most recent call last):
+2025-02-19 14:46:29 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 25, in <module>\n    import cv2 as _\nModuleNotFoundError: No module named 'cv2'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 27, in <module>\n    raise ModuleNotFoundError(\nModuleNotFoundError: OpenCV could not be found, try installing opencv-python:\n\npip install opencv-python\n"}
+2025-02-19 14:46:29 - Début du script cropVideo.php
+2025-02-19 14:46:29 - Arguments reçus: userId=00056, projectName=testAZA, resolution=original
+2025-02-19 14:46:29 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZA
+2025-02-19 14:46:29 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZA
+2025-02-19 14:46:29 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZA' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZA' 'testAZA' 'original'
+2025-02-19 14:46:30 - Sortie de la commande Python: Traceback (most recent call last):
   File "/home/aldo/.local/lib/python3.8/site-packages/scenedetect/__init__.py", line 25, in <module>
     import cv2 as _
 ModuleNotFoundError: No module named 'cv2'
@@ -154,408 +65,514 @@ ModuleNotFoundError: OpenCV could not be found, try installing opencv-python:
 
 pip install opencv-python
 
-2025-02-18 10:38:22 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 25, in <module>\n    import cv2 as _\nModuleNotFoundError: No module named 'cv2'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 27, in <module>\n    raise ModuleNotFoundError(\nModuleNotFoundError: OpenCV could not be found, try installing opencv-python:\n\npip install opencv-python\n"}
-2025-02-18 10:45:07 - Début du script cropVideo.php
-2025-02-18 10:45:07 - Arguments reçus: userId=00056, projectName=tetssssdddfffff, resolution=original
-2025-02-18 10:45:07 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
-2025-02-18 10:45:07 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
-2025-02-18 10:45:07 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
-2025-02-18 10:45:07 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff' 'tetssssdddfffff' 'original'
-2025-02-18 10:45:08 - Sortie de la commande Python: 2025-02-18 11:45:08,558 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
-2025-02-18 11:45:08,558 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
-2025-02-18 11:45:08,559 - INFO - Project name: tetssssdddfffff
-2025-02-18 11:45:08,559 - INFO - Resolution: original
-2025-02-18 11:45:08,559 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff/PARISH - EFA JANGA (Officiel Video).mp4
-[av1 @ 0x11a7bc0] Your platform doesn't suppport hardware accelerated AV1 decoding.
-[av1 @ 0x11a7bc0] Failed to get pixel format.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11a7bc0] Missing Sequence Header.
-[av1 @ 0x11ab300] Your platform doesn't suppport hardware accelerated AV1 decoding.
-[av1 @ 0x11ab300] Failed to get pixel format.
-2025-02-18 11:45:08,574 - INFO - Detecting scenes...
-[av1 @ 0x11ab300] Missing Sequence Header.
-[av1 @ 0x11ab300] Missing Sequence Header.
-[av1 @ 0x11ab300] Missing Sequence Header.
-[av1 @ 0x11ab300] Missing Sequence Header.
-[av1 @ 0x11ab300] Missing Sequence Header.
-[av1 @ 0x11ab300] Missing Sequence Header.
-2025-02-18 11:45:08,575 - INFO - Detected 0 scenes
-2025-02-18 11:45:08,576 - WARNING - No scenes detected in the video.
-Warning: No scenes detected in the video.
-2025-02-18 11:45:08,576 - INFO - Files in output folder: 
-
-2025-02-18 10:45:08 - Sortie JSON: {"success":false,"message":"Aucun fichier g\u00e9n\u00e9r\u00e9 dans le dossier de sortie."}
-2025-02-18 10:45:08 - Début du script cropVideo.php
-2025-02-18 10:45:08 - Arguments reçus: userId=00056, projectName=tetssssdddfffff, resolution=original
-2025-02-18 10:45:08 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
-2025-02-18 10:45:08 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
-2025-02-18 10:45:08 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff' 'tetssssdddfffff' 'original'
-2025-02-18 10:45:09 - Sortie de la commande Python: 2025-02-18 11:45:09,028 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff
-2025-02-18 11:45:09,028 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tetssssdddfffff
-2025-02-18 11:45:09,028 - INFO - Project name: tetssssdddfffff
-2025-02-18 11:45:09,028 - INFO - Resolution: original
-2025-02-18 11:45:09,028 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tetssssdddfffff/PARISH - EFA JANGA (Officiel Video).mp4
-[av1 @ 0x155fbc0] Your platform doesn't suppport hardware accelerated AV1 decoding.
-[av1 @ 0x155fbc0] Failed to get pixel format.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x155fbc0] Missing Sequence Header.
-[av1 @ 0x1563300] Your platform doesn't suppport hardware accelerated AV1 decoding.
-[av1 @ 0x1563300] Failed to get pixel format.
-2025-02-18 11:45:09,040 - INFO - Detecting scenes...
-[av1 @ 0x1563300] Missing Sequence Header.
-[av1 @ 0x1563300] Missing Sequence Header.
-[av1 @ 0x1563300] Missing Sequence Header.
-[av1 @ 0x1563300] Missing Sequence Header.
-[av1 @ 0x1563300] Missing Sequence Header.
-[av1 @ 0x1563300] Missing Sequence Header.
-2025-02-18 11:45:09,041 - INFO - Detected 0 scenes
-2025-02-18 11:45:09,041 - WARNING - No scenes detected in the video.
-Warning: No scenes detected in the video.
-2025-02-18 11:45:09,041 - INFO - Files in output folder: 
-
-2025-02-18 10:45:09 - Sortie JSON: {"success":false,"message":"Aucun fichier g\u00e9n\u00e9r\u00e9 dans le dossier de sortie."}
-2025-02-18 10:46:05 - Début du script cropVideo.php
-2025-02-18 10:46:05 - Arguments reçus: userId=00056, projectName=ejrjue, resolution=original
-2025-02-18 10:46:05 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
-2025-02-18 10:46:05 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
-2025-02-18 10:46:05 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
-2025-02-18 10:46:05 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue' 'ejrjue' 'original'
-2025-02-18 10:46:17 - Sortie de la commande Python: 2025-02-18 11:46:05,748 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
-2025-02-18 11:46:05,748 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
-2025-02-18 11:46:05,748 - INFO - Project name: ejrjue
-2025-02-18 11:46:05,749 - INFO - Resolution: original
-2025-02-18 11:46:05,749 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue/video.mp4
-2025-02-18 11:46:05,761 - INFO - Detecting scenes...
-2025-02-18 11:46:07,585 - INFO - Detected 21 scenes
-2025-02-18 11:46:07,585 - INFO - Splitting video with ffmpeg, output path template:
+2025-02-19 14:46:30 - Sortie JSON: {"success":false,"message":"Traceback (most recent call last):\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 25, in <module>\n    import cv2 as _\nModuleNotFoundError: No module named 'cv2'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"\/home\/aldo\/Documents\/splitVideo\/scripts\/crop_video.py\", line 4, in <module>\n    from scenedetect import detect, AdaptiveDetector, split_video_ffmpeg\n  File \"\/home\/aldo\/.local\/lib\/python3.8\/site-packages\/scenedetect\/__init__.py\", line 27, in <module>\n    raise ModuleNotFoundError(\nModuleNotFoundError: OpenCV could not be found, try installing opencv-python:\n\npip install opencv-python\n"}
+2025-02-19 14:50:55 - Début du script cropVideo.php
+2025-02-19 14:50:55 - Arguments reçus: userId=00056, projectName=testAZAv, resolution=original
+2025-02-19 14:50:55 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZAv
+2025-02-19 14:50:55 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZAv
+2025-02-19 14:50:55 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZAv
+2025-02-19 14:50:55 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZAv' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZAv' 'testAZAv' 'original'
+2025-02-19 14:50:57 - Sortie de la commande Python: 2025-02-19 15:50:55,590 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZAv
+2025-02-19 15:50:55,590 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZAv
+2025-02-19 15:50:55,590 - INFO - Project name: testAZAv
+2025-02-19 15:50:55,590 - INFO - Resolution: original
+2025-02-19 15:50:55,591 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZAv/video.mp4
+2025-02-19 15:50:55,605 - INFO - Detecting scenes...
+2025-02-19 15:50:57,607 - INFO - Detected 21 scenes
+2025-02-19 15:50:57,607 - INFO - Splitting video with ffmpeg, output path template:
   $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-2025-02-18 11:46:07,586 - INFO - Output folder:
+2025-02-19 15:50:57,607 - INFO - Output folder:
   $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:09, 58.88frame/s] 13%|█▎        | 78/618 [00:01<00:07, 71.36frame/s] 17%|█▋        | 108/618 [00:01<00:06, 78.95frame/s] 22%|██▏       | 138/618 [00:01<00:06, 73.99frame/s] 27%|██▋       | 168/618 [00:02<00:06, 71.52frame/s] 30%|██▉       | 185/618 [00:02<00:06, 70.44frame/s] 32%|███▏      | 198/618 [00:02<00:06, 63.49frame/s] 37%|███▋      | 228/618 [00:03<00:06, 58.00frame/s] 42%|████▏     | 258/618 [00:04<00:06, 52.77frame/s] 47%|████▋     | 288/618 [00:04<00:06, 49.85frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 52.50frame/s] 56%|█████▋    | 348/618 [00:05<00:05, 53.73frame/s] 61%|██████    | 378/618 [00:06<00:04, 54.71frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 53.05frame/s] 71%|███████   | 438/618 [00:07<00:03, 53.79frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 57.32frame/s] 81%|████████  | 498/618 [00:08<00:02, 59.33frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 57.39frame/s] 90%|█████████ | 558/618 [00:09<00:00, 63.67frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 67.18frame/s]100%|██████████| 618/618 [00:10<00:00, 66.24frame/s]100%|██████████| 618/618 [00:10<00:00, 60.57frame/s]2025-02-18 11:46:17,804 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
-2025-02-18 11:46:17,804 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-016.mp4, video-Scene-018.mp4, video-Scene-001.mp4, video-Scene-004.mp4, video-Scene-007.mp4, video-Scene-009.mp4, video-Scene-017.mp4, video-Scene-021.mp4, video-Scene-003.mp4, video-Scene-010.mp4, video-Scene-002.mp4, video-Scene-015.mp4, video-Scene-011.mp4, video-Scene-005.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-008.mp4, video-Scene-006.mp4, video-Scene-020.mp4, video-Scene-014.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]2025-02-19 15:50:57,628 - ERROR - ffmpeg could not be found on the system. Please install ffmpeg to enable video output support.
+  0%|          | 0/618 [00:00<?, ?frame/s]2025-02-19 15:50:57,629 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZAv
+2025-02-19 15:50:57,629 - INFO - Files in output folder: 
 
 
-2025-02-18 10:46:17 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
-2025-02-18 10:46:17 - Début du script cropVideo.php
-2025-02-18 10:46:17 - Arguments reçus: userId=00056, projectName=ejrjue, resolution=original
-2025-02-18 10:46:17 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
-2025-02-18 10:46:17 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
-2025-02-18 10:46:17 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue' 'ejrjue' 'original'
-2025-02-18 10:46:30 - Sortie de la commande Python: 2025-02-18 11:46:18,256 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue
-2025-02-18 11:46:18,256 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
-2025-02-18 11:46:18,256 - INFO - Project name: ejrjue
-2025-02-18 11:46:18,256 - INFO - Resolution: original
-2025-02-18 11:46:18,256 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ejrjue/video.mp4
-2025-02-18 11:46:18,274 - INFO - Detecting scenes...
-2025-02-18 11:46:20,069 - INFO - Detected 21 scenes
-2025-02-18 11:46:20,069 - INFO - Splitting video with ffmpeg, output path template:
+2025-02-19 14:50:57 - Sortie JSON: {"success":false,"message":"Aucun fichier g\u00e9n\u00e9r\u00e9 dans le dossier de sortie."}
+2025-02-19 14:50:57 - Début du script cropVideo.php
+2025-02-19 14:50:57 - Arguments reçus: userId=00056, projectName=testAZAv, resolution=original
+2025-02-19 14:50:57 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZAv
+2025-02-19 14:50:57 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZAv
+2025-02-19 14:50:57 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZAv' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZAv' 'testAZAv' 'original'
+2025-02-19 14:50:59 - Sortie de la commande Python: 2025-02-19 15:50:58,001 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZAv
+2025-02-19 15:50:58,001 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZAv
+2025-02-19 15:50:58,001 - INFO - Project name: testAZAv
+2025-02-19 15:50:58,001 - INFO - Resolution: original
+2025-02-19 15:50:58,001 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZAv/video.mp4
+2025-02-19 15:50:58,016 - INFO - Detecting scenes...
+2025-02-19 15:50:59,895 - INFO - Detected 21 scenes
+2025-02-19 15:50:59,896 - INFO - Splitting video with ffmpeg, output path template:
   $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-2025-02-18 11:46:20,069 - INFO - Output folder:
+2025-02-19 15:50:59,896 - INFO - Output folder:
   $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
-  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:07, 76.05frame/s] 13%|█▎        | 78/618 [00:00<00:06, 81.17frame/s] 17%|█▋        | 108/618 [00:01<00:06, 81.80frame/s] 22%|██▏       | 138/618 [00:01<00:06, 71.60frame/s] 27%|██▋       | 168/618 [00:02<00:07, 60.79frame/s] 30%|██▉       | 185/618 [00:02<00:06, 63.03frame/s] 32%|███▏      | 198/618 [00:02<00:06, 60.02frame/s] 37%|███▋      | 228/618 [00:03<00:06, 59.16frame/s] 42%|████▏     | 258/618 [00:04<00:06, 57.83frame/s] 47%|████▋     | 288/618 [00:04<00:05, 59.89frame/s] 51%|█████▏    | 318/618 [00:04<00:04, 61.72frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 61.64frame/s] 61%|██████    | 378/618 [00:05<00:03, 60.41frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 57.01frame/s] 71%|███████   | 438/618 [00:07<00:03, 57.88frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 57.34frame/s] 81%|████████  | 498/618 [00:08<00:02, 59.07frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 55.26frame/s] 90%|█████████ | 558/618 [00:09<00:00, 60.28frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 58.85frame/s]100%|██████████| 618/618 [00:10<00:00, 56.25frame/s]100%|██████████| 618/618 [00:10<00:00, 60.55frame/s]2025-02-18 11:46:30,285 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ejrjue
-2025-02-18 11:46:30,286 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-016.mp4, video-Scene-018.mp4, video-Scene-001.mp4, video-Scene-004.mp4, video-Scene-007.mp4, video-Scene-009.mp4, video-Scene-017.mp4, video-Scene-021.mp4, video-Scene-003.mp4, video-Scene-010.mp4, video-Scene-002.mp4, video-Scene-015.mp4, video-Scene-011.mp4, video-Scene-005.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-008.mp4, video-Scene-006.mp4, video-Scene-020.mp4, video-Scene-014.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]2025-02-19 15:50:59,912 - ERROR - ffmpeg could not be found on the system. Please install ffmpeg to enable video output support.
+  0%|          | 0/618 [00:00<?, ?frame/s]2025-02-19 15:50:59,914 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZAv
+2025-02-19 15:50:59,914 - INFO - Files in output folder: 
 
 
-2025-02-18 10:46:30 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
-2025-02-18 10:53:02 - Début du script cropVideo.php
-2025-02-18 10:53:02 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
-2025-02-18 10:53:02 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
-2025-02-18 10:53:02 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
-2025-02-18 10:53:02 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
-2025-02-18 10:53:02 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 14:50:59 - Sortie JSON: {"success":false,"message":"Aucun fichier g\u00e9n\u00e9r\u00e9 dans le dossier de sortie."}
+2025-02-19 16:05:00 - Début du script cropVideo.php
+2025-02-19 16:05:00 - Arguments reçus: userId=00056, projectName=test 1gbkdfopj, resolution=original
+2025-02-19 16:05:00 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbkdfopj
+2025-02-19 16:05:00 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbkdfopj
+2025-02-19 16:05:00 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbkdfopj
+2025-02-19 16:05:00 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbkdfopj' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbkdfopj' 'test 1gbkdfopj' 'original'
+2025-02-19 16:05:12 - Sortie de la commande Python: 2025-02-19 17:05:00,581 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbkdfopj
+2025-02-19 17:05:00,581 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbkdfopj
+2025-02-19 17:05:00,581 - INFO - Project name: test 1gbkdfopj
+2025-02-19 17:05:00,581 - INFO - Resolution: original
+2025-02-19 17:05:00,581 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbkdfopj/video.mp4
+2025-02-19 17:05:00,594 - INFO - Detecting scenes...
+2025-02-19 17:05:02,181 - INFO - Detected 21 scenes
+2025-02-19 17:05:02,182 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:05:02,182 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:07, 71.84frame/s] 13%|█▎        | 78/618 [00:00<00:06, 80.51frame/s] 17%|█▋        | 108/618 [00:01<00:06, 83.65frame/s] 22%|██▏       | 138/618 [00:01<00:06, 75.15frame/s] 27%|██▋       | 168/618 [00:02<00:06, 71.61frame/s] 30%|██▉       | 185/618 [00:02<00:06, 70.44frame/s] 32%|███▏      | 198/618 [00:02<00:06, 63.57frame/s] 37%|███▋      | 228/618 [00:03<00:06, 59.71frame/s] 42%|████▏     | 258/618 [00:04<00:06, 52.98frame/s] 47%|████▋     | 288/618 [00:04<00:05, 56.21frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 55.70frame/s] 56%|█████▋    | 348/618 [00:05<00:05, 50.83frame/s] 61%|██████    | 378/618 [00:06<00:04, 54.33frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 55.41frame/s] 71%|███████   | 438/618 [00:07<00:03, 55.60frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 58.04frame/s] 81%|████████  | 498/618 [00:08<00:02, 59.19frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 57.62frame/s] 90%|█████████ | 558/618 [00:09<00:00, 63.81frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 66.78frame/s]100%|██████████| 618/618 [00:09<00:00, 66.17frame/s]100%|██████████| 618/618 [00:09<00:00, 61.86frame/s]2025-02-19 17:05:12,186 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbkdfopj
+2025-02-19 17:05:12,186 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:05:12 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:05:12 - Début du script cropVideo.php
+2025-02-19 16:05:12 - Arguments reçus: userId=00056, projectName=test 1gbkdfopj, resolution=original
+2025-02-19 16:05:12 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbkdfopj
+2025-02-19 16:05:12 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbkdfopj
+2025-02-19 16:05:12 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbkdfopj' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbkdfopj' 'test 1gbkdfopj' 'original'
+2025-02-19 16:05:24 - Sortie de la commande Python: 2025-02-19 17:05:12,623 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbkdfopj
+2025-02-19 17:05:12,623 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbkdfopj
+2025-02-19 17:05:12,623 - INFO - Project name: test 1gbkdfopj
+2025-02-19 17:05:12,623 - INFO - Resolution: original
+2025-02-19 17:05:12,623 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbkdfopj/video.mp4
+2025-02-19 17:05:12,636 - INFO - Detecting scenes...
+2025-02-19 17:05:14,185 - INFO - Detected 21 scenes
+2025-02-19 17:05:14,186 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:05:14,186 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:07, 75.80frame/s] 13%|█▎        | 78/618 [00:00<00:06, 84.11frame/s] 17%|█▋        | 108/618 [00:01<00:05, 87.53frame/s] 22%|██▏       | 138/618 [00:01<00:06, 77.46frame/s] 27%|██▋       | 168/618 [00:02<00:06, 73.84frame/s] 30%|██▉       | 185/618 [00:02<00:06, 71.64frame/s] 32%|███▏      | 198/618 [00:02<00:06, 64.58frame/s] 37%|███▋      | 228/618 [00:03<00:06, 62.24frame/s] 42%|████▏     | 258/618 [00:04<00:07, 49.52frame/s] 47%|████▋     | 288/618 [00:04<00:07, 45.11frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 51.44frame/s] 56%|█████▋    | 348/618 [00:05<00:05, 53.60frame/s] 61%|██████    | 378/618 [00:06<00:04, 56.38frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 56.55frame/s] 71%|███████   | 438/618 [00:07<00:03, 58.05frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 60.52frame/s] 81%|████████  | 498/618 [00:08<00:01, 61.45frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 58.88frame/s] 90%|█████████ | 558/618 [00:09<00:00, 60.70frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 63.73frame/s]100%|██████████| 618/618 [00:10<00:00, 62.51frame/s]100%|██████████| 618/618 [00:10<00:00, 61.16frame/s]2025-02-19 17:05:24,301 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbkdfopj
+2025-02-19 17:05:24,302 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:05:24 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:12:40 - Début du script cropVideo.php
+2025-02-19 16:12:40 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:12:40 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:12:40 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:12:40 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:12:40 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:12:54 - Sortie de la commande Python: 2025-02-19 17:12:41,343 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:12:41,343 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:12:41,343 - INFO - Project name: test 1gb
+2025-02-19 17:12:41,343 - INFO - Resolution: original
+2025-02-19 17:12:41,343 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:12:41,356 - INFO - Detecting scenes...
+2025-02-19 17:12:43,007 - INFO - Detected 21 scenes
+2025-02-19 17:12:43,007 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:12:43,008 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:07, 74.08frame/s] 13%|█▎        | 78/618 [00:00<00:06, 83.08frame/s] 17%|█▋        | 108/618 [00:01<00:06, 79.46frame/s] 22%|██▏       | 138/618 [00:02<00:07, 60.61frame/s] 27%|██▋       | 168/618 [00:02<00:09, 46.58frame/s] 30%|██▉       | 185/618 [00:03<00:08, 49.59frame/s] 32%|███▏      | 198/618 [00:03<00:08, 48.88frame/s] 37%|███▋      | 228/618 [00:04<00:07, 51.31frame/s] 42%|████▏     | 258/618 [00:04<00:06, 52.55frame/s] 47%|████▋     | 288/618 [00:05<00:05, 55.85frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 55.88frame/s] 56%|█████▋    | 348/618 [00:06<00:05, 52.98frame/s] 61%|██████    | 378/618 [00:07<00:04, 48.01frame/s] 66%|██████▌   | 408/618 [00:07<00:04, 47.29frame/s] 71%|███████   | 438/618 [00:08<00:03, 48.24frame/s] 76%|███████▌  | 468/618 [00:09<00:03, 45.28frame/s] 81%|████████  | 498/618 [00:09<00:02, 44.52frame/s] 85%|████████▌ | 528/618 [00:10<00:02, 44.14frame/s] 90%|█████████ | 558/618 [00:10<00:01, 51.09frame/s] 95%|█████████▌| 588/618 [00:11<00:00, 55.82frame/s]100%|██████████| 618/618 [00:11<00:00, 56.95frame/s]100%|██████████| 618/618 [00:11<00:00, 52.79frame/s]2025-02-19 17:12:54,725 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:12:54,725 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:12:54 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:18:26 - Début du script cropVideo.php
+2025-02-19 16:18:26 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:18:26 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:18:26 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:18:26 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:18:41 - Sortie de la commande Python: 2025-02-19 17:18:27,217 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:18:27,217 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:18:27,217 - INFO - Project name: test 1gb
+2025-02-19 17:18:27,218 - INFO - Resolution: original
+2025-02-19 17:18:27,218 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:18:27,237 - INFO - Detecting scenes...
+2025-02-19 17:18:28,939 - INFO - Detected 21 scenes
+2025-02-19 17:18:28,939 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:18:28,939 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 64.48frame/s] 13%|█▎        | 78/618 [00:01<00:07, 71.14frame/s] 17%|█▋        | 108/618 [00:01<00:06, 77.92frame/s] 22%|██▏       | 138/618 [00:01<00:06, 70.49frame/s] 27%|██▋       | 168/618 [00:02<00:06, 67.14frame/s] 30%|██▉       | 185/618 [00:02<00:06, 65.19frame/s] 32%|███▏      | 198/618 [00:03<00:07, 57.39frame/s] 37%|███▋      | 228/618 [00:03<00:07, 53.74frame/s] 42%|████▏     | 258/618 [00:04<00:06, 52.52frame/s] 47%|████▋     | 288/618 [00:04<00:06, 50.69frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 54.74frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 54.75frame/s] 61%|██████    | 378/618 [00:06<00:04, 52.09frame/s] 66%|██████▌   | 408/618 [00:07<00:04, 46.33frame/s] 71%|███████   | 438/618 [00:07<00:03, 49.59frame/s] 76%|███████▌  | 468/618 [00:08<00:03, 48.20frame/s] 81%|████████  | 498/618 [00:10<00:03, 31.49frame/s] 85%|████████▌ | 528/618 [00:11<00:02, 33.38frame/s] 90%|█████████ | 558/618 [00:11<00:01, 40.63frame/s] 95%|█████████▌| 588/618 [00:12<00:00, 41.92frame/s]100%|██████████| 618/618 [00:12<00:00, 46.15frame/s]100%|██████████| 618/618 [00:12<00:00, 49.29frame/s]2025-02-19 17:18:41,489 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:18:41,489 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:18:41 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:18:41 - Début du script cropVideo.php
+2025-02-19 16:18:41 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:18:41 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:18:41 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:18:41 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:18:53 - Sortie de la commande Python: 2025-02-19 17:18:42,156 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:18:42,156 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:18:42,157 - INFO - Project name: test 1gb
+2025-02-19 17:18:42,157 - INFO - Resolution: original
+2025-02-19 17:18:42,157 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:18:42,170 - INFO - Detecting scenes...
+2025-02-19 17:18:43,791 - INFO - Detected 21 scenes
+2025-02-19 17:18:43,791 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:18:43,791 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 68.17frame/s] 13%|█▎        | 78/618 [00:01<00:07, 76.80frame/s] 17%|█▋        | 108/618 [00:01<00:06, 81.24frame/s] 22%|██▏       | 138/618 [00:01<00:06, 74.79frame/s] 27%|██▋       | 168/618 [00:02<00:06, 69.95frame/s] 30%|██▉       | 185/618 [00:02<00:06, 69.70frame/s] 32%|███▏      | 198/618 [00:02<00:06, 63.37frame/s] 37%|███▋      | 228/618 [00:03<00:06, 61.10frame/s] 42%|████▏     | 258/618 [00:03<00:06, 56.95frame/s] 47%|████▋     | 288/618 [00:04<00:05, 56.32frame/s] 51%|█████▏    | 318/618 [00:04<00:04, 60.93frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 59.33frame/s] 61%|██████    | 378/618 [00:05<00:04, 58.35frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 57.64frame/s] 71%|███████   | 438/618 [00:07<00:03, 58.07frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 59.82frame/s] 81%|████████  | 498/618 [00:07<00:01, 61.01frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 57.51frame/s] 90%|█████████ | 558/618 [00:08<00:00, 60.80frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 61.81frame/s]100%|██████████| 618/618 [00:10<00:00, 56.30frame/s]100%|██████████| 618/618 [00:10<00:00, 61.28frame/s]2025-02-19 17:18:53,885 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:18:53,885 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:18:53 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:18:53 - Début du script cropVideo.php
+2025-02-19 16:18:53 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:18:53 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:18:53 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:18:53 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:19:06 - Sortie de la commande Python: 2025-02-19 17:18:54,330 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:18:54,330 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:18:54,330 - INFO - Project name: test 1gb
+2025-02-19 17:18:54,330 - INFO - Resolution: original
+2025-02-19 17:18:54,330 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:18:54,343 - INFO - Detecting scenes...
+2025-02-19 17:18:56,142 - INFO - Detected 21 scenes
+2025-02-19 17:18:56,142 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:18:56,142 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 64.32frame/s] 13%|█▎        | 78/618 [00:01<00:07, 75.03frame/s] 17%|█▋        | 108/618 [00:01<00:06, 79.20frame/s] 22%|██▏       | 138/618 [00:01<00:06, 72.30frame/s] 27%|██▋       | 168/618 [00:02<00:06, 67.03frame/s] 30%|██▉       | 185/618 [00:02<00:06, 66.03frame/s] 32%|███▏      | 198/618 [00:02<00:07, 59.12frame/s] 37%|███▋      | 228/618 [00:03<00:06, 56.01frame/s] 42%|████▏     | 258/618 [00:04<00:06, 54.43frame/s] 47%|████▋     | 288/618 [00:04<00:05, 57.70frame/s] 51%|█████▏    | 318/618 [00:05<00:04, 61.41frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 60.64frame/s] 61%|██████    | 378/618 [00:06<00:03, 61.15frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 58.68frame/s] 71%|███████   | 438/618 [00:07<00:03, 58.10frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 60.29frame/s] 81%|████████  | 498/618 [00:08<00:01, 60.64frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 57.11frame/s] 90%|█████████ | 558/618 [00:09<00:00, 61.87frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 62.87frame/s]100%|██████████| 618/618 [00:10<00:00, 60.32frame/s]100%|██████████| 618/618 [00:10<00:00, 61.52frame/s]2025-02-19 17:19:06,201 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:06,202 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:19:06 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:19:06 - Début du script cropVideo.php
+2025-02-19 16:19:06 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:19:06 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:19:06 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:19:06 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:19:20 - Sortie de la commande Python: 2025-02-19 17:19:06,652 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:19:06,652 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:06,652 - INFO - Project name: test 1gb
+2025-02-19 17:19:06,652 - INFO - Resolution: original
+2025-02-19 17:19:06,652 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:19:06,666 - INFO - Detecting scenes...
+2025-02-19 17:19:09,434 - INFO - Detected 21 scenes
+2025-02-19 17:19:09,434 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:19:09,435 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 66.42frame/s] 13%|█▎        | 78/618 [00:01<00:07, 77.08frame/s] 17%|█▋        | 108/618 [00:01<00:06, 80.37frame/s] 22%|██▏       | 138/618 [00:01<00:06, 72.09frame/s] 27%|██▋       | 168/618 [00:02<00:06, 67.92frame/s] 30%|██▉       | 185/618 [00:02<00:06, 65.90frame/s] 32%|███▏      | 198/618 [00:03<00:07, 56.39frame/s] 37%|███▋      | 228/618 [00:03<00:06, 55.87frame/s] 42%|████▏     | 258/618 [00:04<00:06, 55.10frame/s] 47%|████▋     | 288/618 [00:04<00:05, 56.25frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 51.54frame/s] 56%|█████▋    | 348/618 [00:06<00:05, 48.15frame/s] 61%|██████    | 378/618 [00:06<00:04, 52.27frame/s] 66%|██████▌   | 408/618 [00:07<00:03, 53.76frame/s] 71%|███████   | 438/618 [00:07<00:03, 51.34frame/s] 76%|███████▌  | 468/618 [00:08<00:02, 53.05frame/s] 81%|████████  | 498/618 [00:09<00:02, 45.36frame/s] 85%|████████▌ | 528/618 [00:09<00:02, 43.19frame/s] 90%|█████████ | 558/618 [00:10<00:01, 49.34frame/s] 95%|█████████▌| 588/618 [00:10<00:00, 52.21frame/s]100%|██████████| 618/618 [00:11<00:00, 53.38frame/s]100%|██████████| 618/618 [00:11<00:00, 54.77frame/s]2025-02-19 17:19:20,732 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:20,733 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:19:20 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:19:20 - Début du script cropVideo.php
+2025-02-19 16:19:20 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:19:20 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:19:20 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:19:20 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:19:33 - Sortie de la commande Python: 2025-02-19 17:19:21,181 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:19:21,181 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:21,181 - INFO - Project name: test 1gb
+2025-02-19 17:19:21,181 - INFO - Resolution: original
+2025-02-19 17:19:21,181 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:19:21,195 - INFO - Detecting scenes...
+2025-02-19 17:19:23,006 - INFO - Detected 21 scenes
+2025-02-19 17:19:23,007 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:19:23,007 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 71.09frame/s] 13%|█▎        | 78/618 [00:01<00:06, 79.25frame/s] 17%|█▋        | 108/618 [00:01<00:07, 68.59frame/s] 22%|██▏       | 138/618 [00:02<00:07, 65.92frame/s] 27%|██▋       | 168/618 [00:02<00:06, 65.74frame/s] 30%|██▉       | 185/618 [00:02<00:06, 64.83frame/s] 32%|███▏      | 198/618 [00:03<00:07, 58.90frame/s] 37%|███▋      | 228/618 [00:03<00:07, 53.58frame/s] 42%|████▏     | 258/618 [00:04<00:08, 44.08frame/s] 47%|████▋     | 288/618 [00:05<00:06, 48.95frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 52.97frame/s] 56%|█████▋    | 348/618 [00:06<00:05, 51.42frame/s] 61%|██████    | 378/618 [00:06<00:04, 55.03frame/s] 66%|██████▌   | 408/618 [00:07<00:03, 54.97frame/s] 71%|███████   | 438/618 [00:07<00:03, 57.02frame/s] 76%|███████▌  | 468/618 [00:08<00:02, 59.46frame/s] 81%|████████  | 498/618 [00:08<00:01, 60.63frame/s] 85%|████████▌ | 528/618 [00:09<00:01, 58.42frame/s] 90%|█████████ | 558/618 [00:09<00:00, 63.60frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 66.72frame/s]100%|██████████| 618/618 [00:10<00:00, 66.26frame/s]100%|██████████| 618/618 [00:10<00:00, 59.59frame/s]2025-02-19 17:19:33,388 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:33,389 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:19:33 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:19:33 - Début du script cropVideo.php
+2025-02-19 16:19:33 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:19:33 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:19:33 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:19:33 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:19:46 - Sortie de la commande Python: 2025-02-19 17:19:33,843 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:19:33,843 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:33,843 - INFO - Project name: test 1gb
+2025-02-19 17:19:33,843 - INFO - Resolution: original
+2025-02-19 17:19:33,843 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:19:33,856 - INFO - Detecting scenes...
+2025-02-19 17:19:35,619 - INFO - Detected 21 scenes
+2025-02-19 17:19:35,620 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:19:35,620 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 71.20frame/s] 13%|█▎        | 78/618 [00:01<00:06, 79.13frame/s] 17%|█▋        | 108/618 [00:01<00:06, 84.91frame/s] 22%|██▏       | 138/618 [00:01<00:06, 72.90frame/s] 27%|██▋       | 168/618 [00:02<00:06, 70.13frame/s] 30%|██▉       | 185/618 [00:02<00:06, 68.42frame/s] 32%|███▏      | 198/618 [00:02<00:07, 59.08frame/s] 37%|███▋      | 228/618 [00:03<00:07, 54.43frame/s] 42%|████▏     | 258/618 [00:04<00:06, 54.01frame/s] 47%|████▋     | 288/618 [00:04<00:06, 52.10frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 52.67frame/s] 56%|█████▋    | 348/618 [00:05<00:05, 50.69frame/s] 61%|██████    | 378/618 [00:06<00:04, 52.56frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 52.92frame/s] 71%|███████   | 438/618 [00:07<00:03, 54.55frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 57.66frame/s] 81%|████████  | 498/618 [00:08<00:02, 58.82frame/s] 85%|████████▌ | 528/618 [00:09<00:01, 54.16frame/s] 90%|█████████ | 558/618 [00:09<00:01, 52.11frame/s] 95%|█████████▌| 588/618 [00:10<00:00, 54.90frame/s]100%|██████████| 618/618 [00:10<00:00, 56.90frame/s]100%|██████████| 618/618 [00:10<00:00, 57.86frame/s]2025-02-19 17:19:46,313 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:46,314 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:19:46 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:19:46 - Début du script cropVideo.php
+2025-02-19 16:19:46 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:19:46 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:19:46 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:19:46 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:19:58 - Sortie de la commande Python: 2025-02-19 17:19:46,785 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:19:46,786 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:46,786 - INFO - Project name: test 1gb
+2025-02-19 17:19:46,786 - INFO - Resolution: original
+2025-02-19 17:19:46,786 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:19:46,799 - INFO - Detecting scenes...
+2025-02-19 17:19:48,620 - INFO - Detected 21 scenes
+2025-02-19 17:19:48,621 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:19:48,621 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 69.32frame/s] 13%|█▎        | 78/618 [00:01<00:06, 77.22frame/s] 17%|█▋        | 108/618 [00:01<00:06, 74.86frame/s] 22%|██▏       | 138/618 [00:02<00:07, 60.99frame/s] 27%|██▋       | 168/618 [00:02<00:07, 57.77frame/s] 30%|██▉       | 185/618 [00:02<00:07, 57.94frame/s] 32%|███▏      | 198/618 [00:03<00:07, 54.41frame/s] 37%|███▋      | 228/618 [00:03<00:07, 50.50frame/s] 42%|████▏     | 258/618 [00:04<00:06, 51.89frame/s] 47%|████▋     | 288/618 [00:04<00:05, 55.04frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 57.98frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 58.23frame/s] 61%|██████    | 378/618 [00:06<00:04, 58.21frame/s] 66%|██████▌   | 408/618 [00:07<00:03, 56.43frame/s] 71%|███████   | 438/618 [00:07<00:03, 57.99frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 60.21frame/s] 81%|████████  | 498/618 [00:08<00:01, 60.93frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 58.69frame/s] 90%|█████████ | 558/618 [00:09<00:00, 64.53frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 66.93frame/s]100%|██████████| 618/618 [00:10<00:00, 65.88frame/s]100%|██████████| 618/618 [00:10<00:00, 60.46frame/s]2025-02-19 17:19:58,854 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:58,854 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:19:58 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:19:58 - Début du script cropVideo.php
+2025-02-19 16:19:58 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:19:58 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:19:58 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:19:58 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:20:10 - Sortie de la commande Python: 2025-02-19 17:19:59,284 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:19:59,284 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:19:59,285 - INFO - Project name: test 1gb
+2025-02-19 17:19:59,285 - INFO - Resolution: original
+2025-02-19 17:19:59,285 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:19:59,304 - INFO - Detecting scenes...
+2025-02-19 17:20:00,959 - INFO - Detected 21 scenes
+2025-02-19 17:20:00,960 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:20:00,960 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:07, 72.25frame/s] 13%|█▎        | 78/618 [00:00<00:06, 81.31frame/s] 17%|█▋        | 108/618 [00:01<00:06, 84.09frame/s] 22%|██▏       | 138/618 [00:01<00:06, 75.38frame/s] 27%|██▋       | 168/618 [00:02<00:06, 72.09frame/s] 30%|██▉       | 185/618 [00:02<00:06, 69.88frame/s] 32%|███▏      | 198/618 [00:02<00:06, 63.28frame/s] 37%|███▋      | 228/618 [00:03<00:06, 60.04frame/s] 42%|████▏     | 258/618 [00:03<00:06, 57.95frame/s] 47%|████▋     | 288/618 [00:04<00:05, 60.18frame/s] 51%|█████▏    | 318/618 [00:04<00:04, 64.03frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 62.28frame/s] 61%|██████    | 378/618 [00:05<00:03, 63.31frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 61.43frame/s] 71%|███████   | 438/618 [00:06<00:02, 61.07frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 62.93frame/s] 81%|████████  | 498/618 [00:07<00:01, 62.35frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 59.41frame/s] 90%|█████████ | 558/618 [00:08<00:00, 65.58frame/s] 95%|█████████▌| 588/618 [00:08<00:00, 69.20frame/s]100%|██████████| 618/618 [00:09<00:00, 66.26frame/s]100%|██████████| 618/618 [00:09<00:00, 65.33frame/s]2025-02-19 17:20:10,430 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:20:10,430 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:20:10 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:20:10 - Début du script cropVideo.php
+2025-02-19 16:20:10 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:20:10 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:20:10 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:20:10 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:20:22 - Sortie de la commande Python: 2025-02-19 17:20:10,879 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:20:10,879 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:20:10,879 - INFO - Project name: test 1gb
+2025-02-19 17:20:10,879 - INFO - Resolution: original
+2025-02-19 17:20:10,879 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:20:10,892 - INFO - Detecting scenes...
+2025-02-19 17:20:12,564 - INFO - Detected 21 scenes
+2025-02-19 17:20:12,564 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:20:12,564 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:07, 73.23frame/s] 13%|█▎        | 78/618 [00:00<00:06, 82.99frame/s] 17%|█▋        | 108/618 [00:01<00:05, 86.08frame/s] 22%|██▏       | 138/618 [00:01<00:06, 77.97frame/s] 27%|██▋       | 168/618 [00:02<00:06, 73.49frame/s] 30%|██▉       | 185/618 [00:02<00:06, 71.45frame/s] 32%|███▏      | 198/618 [00:02<00:06, 64.16frame/s] 37%|███▋      | 228/618 [00:03<00:06, 60.28frame/s] 42%|████▏     | 258/618 [00:03<00:06, 58.50frame/s] 47%|████▋     | 288/618 [00:04<00:05, 59.66frame/s] 51%|█████▏    | 318/618 [00:04<00:04, 62.17frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 61.88frame/s] 61%|██████    | 378/618 [00:05<00:03, 62.57frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 60.37frame/s] 71%|███████   | 438/618 [00:06<00:03, 59.78frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 61.79frame/s] 81%|████████  | 498/618 [00:07<00:01, 62.66frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 59.31frame/s] 90%|█████████ | 558/618 [00:08<00:00, 64.91frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 62.61frame/s]100%|██████████| 618/618 [00:09<00:00, 62.23frame/s]100%|██████████| 618/618 [00:09<00:00, 64.31frame/s]2025-02-19 17:20:22,185 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:20:22,185 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:20:22 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:20:22 - Début du script cropVideo.php
+2025-02-19 16:20:22 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:20:22 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:20:22 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:20:22 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:20:33 - Sortie de la commande Python: 2025-02-19 17:20:22,615 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:20:22,615 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:20:22,615 - INFO - Project name: test 1gb
+2025-02-19 17:20:22,615 - INFO - Resolution: original
+2025-02-19 17:20:22,615 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:20:22,628 - INFO - Detecting scenes...
+2025-02-19 17:20:24,281 - INFO - Detected 21 scenes
+2025-02-19 17:20:24,282 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:20:24,282 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 70.87frame/s] 13%|█▎        | 78/618 [00:01<00:06, 79.78frame/s] 17%|█▋        | 108/618 [00:01<00:06, 84.91frame/s] 22%|██▏       | 138/618 [00:01<00:06, 75.80frame/s] 27%|██▋       | 168/618 [00:02<00:06, 70.42frame/s] 30%|██▉       | 185/618 [00:02<00:06, 68.10frame/s] 32%|███▏      | 198/618 [00:02<00:06, 61.51frame/s] 37%|███▋      | 228/618 [00:03<00:06, 60.01frame/s] 42%|████▏     | 258/618 [00:03<00:06, 57.58frame/s] 47%|████▋     | 288/618 [00:04<00:05, 59.34frame/s] 51%|█████▏    | 318/618 [00:04<00:04, 62.77frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 61.88frame/s] 61%|██████    | 378/618 [00:05<00:03, 63.48frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 60.96frame/s] 71%|███████   | 438/618 [00:06<00:02, 61.01frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 63.02frame/s] 81%|████████  | 498/618 [00:07<00:01, 63.07frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 59.48frame/s] 90%|█████████ | 558/618 [00:08<00:00, 65.56frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 68.25frame/s]100%|██████████| 618/618 [00:09<00:00, 65.95frame/s]100%|██████████| 618/618 [00:09<00:00, 64.91frame/s]2025-02-19 17:20:33,820 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:20:33,820 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:20:33 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:22:31 - Début du script cropVideo.php
+2025-02-19 16:22:31 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:22:31 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:22:31 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:22:31 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:22:44 - Sortie de la commande Python: 2025-02-19 17:22:32,166 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:22:32,166 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:22:32,166 - INFO - Project name: test 1gb
+2025-02-19 17:22:32,166 - INFO - Resolution: original
+2025-02-19 17:22:32,167 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:22:32,183 - INFO - Detecting scenes...
+2025-02-19 17:22:34,142 - INFO - Detected 21 scenes
+2025-02-19 17:22:34,143 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:22:34,143 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 67.28frame/s] 13%|█▎        | 78/618 [00:01<00:07, 74.62frame/s] 17%|█▋        | 108/618 [00:01<00:06, 77.20frame/s] 22%|██▏       | 138/618 [00:01<00:06, 71.99frame/s] 27%|██▋       | 168/618 [00:02<00:06, 68.70frame/s] 30%|██▉       | 185/618 [00:02<00:06, 67.83frame/s] 32%|███▏      | 198/618 [00:02<00:07, 59.41frame/s] 37%|███▋      | 228/618 [00:03<00:06, 55.81frame/s] 42%|████▏     | 258/618 [00:04<00:06, 55.08frame/s] 47%|████▋     | 288/618 [00:04<00:06, 54.50frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 57.62frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 55.14frame/s] 61%|██████    | 378/618 [00:06<00:04, 56.35frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 56.02frame/s] 71%|███████   | 438/618 [00:07<00:03, 56.49frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 58.43frame/s] 81%|████████  | 498/618 [00:08<00:02, 58.40frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 54.80frame/s] 90%|█████████ | 558/618 [00:09<00:01, 59.21frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 61.16frame/s]100%|██████████| 618/618 [00:10<00:00, 56.57frame/s]100%|██████████| 618/618 [00:10<00:00, 59.40frame/s]2025-02-19 17:22:44,562 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:22:44,562 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:22:44 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:24:24 - Début du script cropVideo.php
+2025-02-19 16:24:24 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:24:24 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:24:24 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:24:24 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:24:39 - Sortie de la commande Python: 2025-02-19 17:24:24,991 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:24:24,991 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:24:24,992 - INFO - Project name: test 1gb
+2025-02-19 17:24:24,992 - INFO - Resolution: original
+2025-02-19 17:24:24,992 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:24:25,005 - INFO - Detecting scenes...
+2025-02-19 17:24:26,737 - INFO - Detected 21 scenes
+2025-02-19 17:24:26,738 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:24:26,738 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:09, 62.20frame/s] 13%|█▎        | 78/618 [00:01<00:07, 69.12frame/s] 17%|█▋        | 108/618 [00:01<00:06, 74.72frame/s] 22%|██▏       | 138/618 [00:02<00:07, 61.34frame/s] 27%|██▋       | 168/618 [00:03<00:10, 41.49frame/s] 30%|██▉       | 185/618 [00:03<00:10, 42.69frame/s] 32%|███▏      | 198/618 [00:04<00:11, 37.00frame/s] 37%|███▋      | 228/618 [00:05<00:14, 27.20frame/s] 42%|████▏     | 258/618 [00:06<00:12, 29.58frame/s] 47%|████▋     | 288/618 [00:07<00:09, 33.30frame/s] 51%|█████▏    | 318/618 [00:07<00:07, 38.53frame/s] 56%|█████▋    | 348/618 [00:08<00:06, 42.25frame/s] 61%|██████    | 378/618 [00:08<00:05, 47.50frame/s] 66%|██████▌   | 408/618 [00:09<00:04, 49.70frame/s] 71%|███████   | 438/618 [00:10<00:03, 49.61frame/s] 76%|███████▌  | 468/618 [00:10<00:02, 52.09frame/s] 81%|████████  | 498/618 [00:11<00:02, 52.04frame/s] 85%|████████▌ | 528/618 [00:11<00:01, 50.70frame/s] 90%|█████████ | 558/618 [00:12<00:01, 57.08frame/s] 95%|█████████▌| 588/618 [00:12<00:00, 60.29frame/s]100%|██████████| 618/618 [00:13<00:00, 58.09frame/s]100%|██████████| 618/618 [00:13<00:00, 47.19frame/s]2025-02-19 17:24:39,850 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:24:39,850 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:24:39 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:24:42 - Début du script cropVideo.php
+2025-02-19 16:24:42 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:24:42 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:24:42 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:24:42 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:24:55 - Sortie de la commande Python: 2025-02-19 17:24:43,071 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:24:43,071 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:24:43,071 - INFO - Project name: test 1gb
+2025-02-19 17:24:43,071 - INFO - Resolution: original
+2025-02-19 17:24:43,071 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:24:43,084 - INFO - Detecting scenes...
+2025-02-19 17:24:44,779 - INFO - Detected 21 scenes
+2025-02-19 17:24:44,779 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:24:44,780 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:07, 73.42frame/s] 13%|█▎        | 78/618 [00:01<00:06, 77.26frame/s] 17%|█▋        | 108/618 [00:01<00:06, 77.57frame/s] 22%|██▏       | 138/618 [00:01<00:07, 67.34frame/s] 27%|██▋       | 168/618 [00:02<00:06, 66.44frame/s] 30%|██▉       | 185/618 [00:02<00:07, 57.49frame/s] 32%|███▏      | 198/618 [00:03<00:08, 52.17frame/s] 37%|███▋      | 228/618 [00:04<00:08, 45.28frame/s] 42%|████▏     | 258/618 [00:04<00:07, 46.33frame/s] 47%|████▋     | 288/618 [00:05<00:06, 49.25frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 53.15frame/s] 56%|█████▋    | 348/618 [00:06<00:05, 53.53frame/s] 61%|██████    | 378/618 [00:06<00:04, 57.01frame/s] 66%|██████▌   | 408/618 [00:07<00:03, 56.83frame/s] 71%|███████   | 438/618 [00:07<00:03, 56.75frame/s] 76%|███████▌  | 468/618 [00:08<00:02, 58.48frame/s] 81%|████████  | 498/618 [00:08<00:01, 60.06frame/s] 85%|████████▌ | 528/618 [00:09<00:01, 57.29frame/s] 90%|█████████ | 558/618 [00:09<00:00, 63.40frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 65.82frame/s]100%|██████████| 618/618 [00:10<00:00, 64.97frame/s]100%|██████████| 618/618 [00:10<00:00, 59.06frame/s]2025-02-19 17:24:55,256 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:24:55,257 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:24:55 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:26:16 - Début du script cropVideo.php
+2025-02-19 16:26:16 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:26:16 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:26:16 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:26:16 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:26:30 - Sortie de la commande Python: 2025-02-19 17:26:17,092 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:26:17,092 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:26:17,092 - INFO - Project name: test 1gb
+2025-02-19 17:26:17,092 - INFO - Resolution: original
+2025-02-19 17:26:17,092 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:26:17,107 - INFO - Detecting scenes...
+2025-02-19 17:26:19,835 - INFO - Detected 21 scenes
+2025-02-19 17:26:19,835 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:26:19,836 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:01<00:12, 44.98frame/s] 13%|█▎        | 78/618 [00:01<00:09, 59.37frame/s] 17%|█▋        | 108/618 [00:01<00:07, 65.95frame/s] 22%|██▏       | 138/618 [00:02<00:08, 59.86frame/s] 27%|██▋       | 168/618 [00:02<00:07, 57.78frame/s] 30%|██▉       | 185/618 [00:03<00:07, 57.14frame/s] 32%|███▏      | 198/618 [00:03<00:07, 53.05frame/s] 37%|███▋      | 228/618 [00:04<00:07, 52.45frame/s] 42%|████▏     | 258/618 [00:04<00:06, 51.94frame/s] 47%|████▋     | 288/618 [00:05<00:05, 55.23frame/s] 51%|█████▏    | 318/618 [00:05<00:04, 60.17frame/s] 56%|█████▋    | 348/618 [00:06<00:04, 61.33frame/s] 61%|██████    | 378/618 [00:06<00:03, 61.86frame/s] 66%|██████▌   | 408/618 [00:07<00:03, 60.69frame/s] 71%|███████   | 438/618 [00:07<00:02, 60.82frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 63.08frame/s] 81%|████████  | 498/618 [00:08<00:01, 62.01frame/s] 85%|████████▌ | 528/618 [00:09<00:01, 55.54frame/s] 90%|█████████ | 558/618 [00:09<00:01, 58.44frame/s] 95%|█████████▌| 588/618 [00:10<00:00, 50.11frame/s]100%|██████████| 618/618 [00:11<00:00, 48.39frame/s]100%|██████████| 618/618 [00:11<00:00, 55.86frame/s]2025-02-19 17:26:30,915 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:26:30,915 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:26:30 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:43:49 - Début du script cropVideo.php
+2025-02-19 16:43:49 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:43:49 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:43:49 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:43:49 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:44:03 - Sortie de la commande Python: 2025-02-19 17:43:51,132 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:43:51,133 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:43:51,133 - INFO - Project name: test 1gb
+2025-02-19 17:43:51,133 - INFO - Resolution: original
+2025-02-19 17:43:51,133 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:43:51,218 - INFO - Detecting scenes...
+2025-02-19 17:43:53,379 - INFO - Detected 21 scenes
+2025-02-19 17:43:53,379 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:43:53,380 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 67.01frame/s] 13%|█▎        | 78/618 [00:01<00:06, 78.69frame/s] 17%|█▋        | 108/618 [00:01<00:06, 78.97frame/s] 22%|██▏       | 138/618 [00:01<00:06, 74.81frame/s] 27%|██▋       | 168/618 [00:02<00:07, 60.58frame/s] 30%|██▉       | 185/618 [00:02<00:07, 59.94frame/s] 32%|███▏      | 198/618 [00:03<00:07, 53.54frame/s] 37%|███▋      | 228/618 [00:03<00:07, 52.72frame/s] 42%|████▏     | 258/618 [00:04<00:06, 54.46frame/s] 47%|████▋     | 288/618 [00:04<00:05, 58.00frame/s] 51%|█████▏    | 318/618 [00:05<00:04, 63.21frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 64.06frame/s] 61%|██████    | 378/618 [00:06<00:03, 64.91frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 62.87frame/s] 71%|███████   | 438/618 [00:07<00:02, 62.28frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 61.55frame/s] 81%|████████  | 498/618 [00:08<00:02, 57.94frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 52.42frame/s] 90%|█████████ | 558/618 [00:09<00:01, 58.53frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 62.48frame/s]100%|██████████| 618/618 [00:10<00:00, 61.78frame/s]100%|██████████| 618/618 [00:10<00:00, 61.37frame/s]2025-02-19 17:44:03,469 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:44:03,469 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:44:03 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:44:03 - Début du script cropVideo.php
+2025-02-19 16:44:03 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:44:03 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:44:03 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:44:03 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:44:19 - Sortie de la commande Python: 2025-02-19 17:44:03,949 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:44:03,949 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:44:03,949 - INFO - Project name: test 1gb
+2025-02-19 17:44:03,950 - INFO - Resolution: original
+2025-02-19 17:44:03,950 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:44:03,962 - INFO - Detecting scenes...
+2025-02-19 17:44:05,894 - INFO - Detected 21 scenes
+2025-02-19 17:44:05,895 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:44:05,895 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 70.75frame/s] 13%|█▎        | 78/618 [00:01<00:07, 71.54frame/s] 17%|█▋        | 108/618 [00:01<00:06, 79.61frame/s] 22%|██▏       | 138/618 [00:02<00:08, 57.99frame/s] 27%|██▋       | 168/618 [00:02<00:07, 58.35frame/s] 30%|██▉       | 185/618 [00:02<00:07, 58.82frame/s] 32%|███▏      | 198/618 [00:03<00:08, 49.60frame/s] 37%|███▋      | 228/618 [00:04<00:11, 33.89frame/s] 42%|████▏     | 258/618 [00:06<00:14, 25.02frame/s] 47%|████▋     | 288/618 [00:07<00:12, 27.20frame/s] 51%|█████▏    | 318/618 [00:07<00:09, 32.64frame/s] 56%|█████▋    | 348/618 [00:08<00:07, 36.06frame/s] 61%|██████    | 378/618 [00:09<00:05, 41.24frame/s] 66%|██████▌   | 408/618 [00:09<00:04, 45.19frame/s] 71%|███████   | 438/618 [00:10<00:03, 48.61frame/s] 76%|███████▌  | 468/618 [00:10<00:02, 53.53frame/s] 81%|████████  | 498/618 [00:11<00:02, 56.48frame/s] 85%|████████▌ | 528/618 [00:11<00:01, 53.94frame/s] 90%|█████████ | 558/618 [00:12<00:01, 52.99frame/s] 95%|█████████▌| 588/618 [00:12<00:00, 57.02frame/s]100%|██████████| 618/618 [00:13<00:00, 57.97frame/s]100%|██████████| 618/618 [00:13<00:00, 47.03frame/s]2025-02-19 17:44:19,049 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:44:19,049 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:44:19 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:44:19 - Début du script cropVideo.php
+2025-02-19 16:44:19 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:44:19 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:44:19 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:44:19 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:44:32 - Sortie de la commande Python: 2025-02-19 17:44:19,497 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:44:19,497 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:44:19,497 - INFO - Project name: test 1gb
+2025-02-19 17:44:19,497 - INFO - Resolution: original
+2025-02-19 17:44:19,497 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:44:19,516 - INFO - Detecting scenes...
+2025-02-19 17:44:21,450 - INFO - Detected 21 scenes
+2025-02-19 17:44:21,450 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:44:21,450 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:11, 49.91frame/s] 13%|█▎        | 78/618 [00:01<00:09, 54.23frame/s] 17%|█▋        | 108/618 [00:01<00:08, 58.10frame/s] 22%|██▏       | 138/618 [00:02<00:09, 49.37frame/s] 27%|██▋       | 168/618 [00:03<00:09, 49.83frame/s] 30%|██▉       | 185/618 [00:03<00:08, 52.37frame/s] 32%|███▏      | 198/618 [00:03<00:08, 50.94frame/s] 37%|███▋      | 228/618 [00:04<00:07, 52.87frame/s] 42%|████▏     | 258/618 [00:04<00:06, 52.96frame/s] 47%|████▋     | 288/618 [00:05<00:06, 54.94frame/s] 51%|█████▏    | 318/618 [00:05<00:05, 57.64frame/s] 56%|█████▋    | 348/618 [00:06<00:04, 56.61frame/s] 61%|██████    | 378/618 [00:06<00:04, 57.00frame/s] 66%|██████▌   | 408/618 [00:07<00:03, 56.66frame/s] 71%|███████   | 438/618 [00:08<00:03, 57.18frame/s] 76%|███████▌  | 468/618 [00:08<00:02, 58.60frame/s] 81%|████████  | 498/618 [00:08<00:01, 60.24frame/s] 85%|████████▌ | 528/618 [00:09<00:01, 58.04frame/s] 90%|█████████ | 558/618 [00:09<00:00, 63.46frame/s] 95%|█████████▌| 588/618 [00:10<00:00, 66.95frame/s]100%|██████████| 618/618 [00:10<00:00, 65.68frame/s]100%|██████████| 618/618 [00:10<00:00, 57.39frame/s]2025-02-19 17:44:32,231 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:44:32,231 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:44:32 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:46:57 - Début du script cropVideo.php
+2025-02-19 16:46:57 - Arguments reçus: userId=00056, projectName=test 1gb, resolution=original
+2025-02-19 16:46:57 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 16:46:57 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 16:46:57 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb' 'test 1gb' 'original'
+2025-02-19 16:47:09 - Sortie de la commande Python: 2025-02-19 17:46:58,046 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb
+2025-02-19 17:46:58,046 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:46:58,046 - INFO - Project name: test 1gb
+2025-02-19 17:46:58,046 - INFO - Resolution: original
+2025-02-19 17:46:58,046 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb/video.mp4
+2025-02-19 17:46:58,063 - INFO - Detecting scenes...
+2025-02-19 17:47:00,005 - INFO - Detected 21 scenes
+2025-02-19 17:47:00,005 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:47:00,005 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:08, 67.23frame/s] 13%|█▎        | 78/618 [00:01<00:07, 75.74frame/s] 17%|█▋        | 108/618 [00:01<00:06, 82.76frame/s] 22%|██▏       | 138/618 [00:01<00:06, 75.50frame/s] 27%|██▋       | 168/618 [00:02<00:06, 72.80frame/s] 30%|██▉       | 185/618 [00:02<00:06, 72.12frame/s] 32%|███▏      | 198/618 [00:02<00:06, 65.15frame/s] 37%|███▋      | 228/618 [00:03<00:06, 63.26frame/s] 42%|████▏     | 258/618 [00:03<00:06, 59.85frame/s] 47%|████▋     | 288/618 [00:04<00:05, 61.54frame/s] 51%|█████▏    | 318/618 [00:04<00:04, 64.96frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 62.93frame/s] 61%|██████    | 378/618 [00:05<00:03, 62.12frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 60.91frame/s] 71%|███████   | 438/618 [00:06<00:02, 60.91frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 62.69frame/s] 81%|████████  | 498/618 [00:07<00:01, 64.05frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 60.84frame/s] 90%|█████████ | 558/618 [00:08<00:00, 66.12frame/s] 95%|█████████▌| 588/618 [00:08<00:00, 69.09frame/s]100%|██████████| 618/618 [00:09<00:00, 68.68frame/s]100%|██████████| 618/618 [00:09<00:00, 66.07frame/s]2025-02-19 17:47:09,373 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb
+2025-02-19 17:47:09,374 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:47:09 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}
+2025-02-19 16:55:36 - Début du script cropVideo.php
+2025-02-19 16:55:36 - Arguments reçus: userId=00056, projectName=test, resolution=original
+2025-02-19 16:55:36 - Directory created: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test
+2025-02-19 16:55:36 - Dossier d'entrée: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test
+2025-02-19 16:55:36 - Dossier de sortie: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test
+2025-02-19 16:55:36 - Commande à exécuter: python3 /home/aldo/Documents/splitVideo/scripts/crop_video.py '/home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test' '/home/aldo/Documents/splitVideo/projets/00056/processed_videos/test' 'test' 'original'
+2025-02-19 16:55:49 - Sortie de la commande Python: 2025-02-19 17:55:37,330 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test
+2025-02-19 17:55:37,331 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test
+2025-02-19 17:55:37,331 - INFO - Project name: test
+2025-02-19 17:55:37,331 - INFO - Resolution: original
+2025-02-19 17:55:37,331 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test/video.mp4
+2025-02-19 17:55:37,351 - INFO - Detecting scenes...
+2025-02-19 17:55:39,067 - INFO - Detected 21 scenes
+2025-02-19 17:55:39,067 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-19 17:55:39,067 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+  0%|          | 0/618 [00:00<?, ?frame/s]  8%|▊         | 48/618 [00:00<00:07, 73.93frame/s] 13%|█▎        | 78/618 [00:00<00:06, 82.27frame/s] 17%|█▋        | 108/618 [00:01<00:06, 79.05frame/s] 22%|██▏       | 138/618 [00:01<00:07, 68.33frame/s] 27%|██▋       | 168/618 [00:02<00:06, 65.17frame/s] 30%|██▉       | 185/618 [00:02<00:06, 65.85frame/s] 32%|███▏      | 198/618 [00:02<00:06, 60.99frame/s] 37%|███▋      | 228/618 [00:03<00:06, 60.01frame/s] 42%|████▏     | 258/618 [00:04<00:06, 56.57frame/s] 47%|████▋     | 288/618 [00:04<00:05, 56.13frame/s] 51%|█████▏    | 318/618 [00:05<00:04, 60.21frame/s] 56%|█████▋    | 348/618 [00:05<00:04, 58.37frame/s] 61%|██████    | 378/618 [00:06<00:04, 58.91frame/s] 66%|██████▌   | 408/618 [00:06<00:03, 58.23frame/s] 71%|███████   | 438/618 [00:07<00:03, 56.75frame/s] 76%|███████▌  | 468/618 [00:07<00:02, 59.76frame/s] 81%|████████  | 498/618 [00:08<00:02, 58.54frame/s] 85%|████████▌ | 528/618 [00:08<00:01, 56.45frame/s] 90%|█████████ | 558/618 [00:09<00:00, 63.19frame/s] 95%|█████████▌| 588/618 [00:09<00:00, 66.69frame/s]100%|██████████| 618/618 [00:09<00:00, 65.47frame/s]100%|██████████| 618/618 [00:09<00:00, 62.39frame/s]2025-02-19 17:55:48,985 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test
+2025-02-19 17:55:48,986 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+
+
+2025-02-19 16:55:49 - Sortie JSON: {"success":true,"message":"Les vid\u00e9os ont \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9es avec succ\u00e8s. Fichiers g\u00e9n\u00e9r\u00e9s: video-Scene-001.mp4, video-Scene-002.mp4, video-Scene-003.mp4, video-Scene-004.mp4, video-Scene-005.mp4, video-Scene-006.mp4, video-Scene-007.mp4, video-Scene-008.mp4, video-Scene-009.mp4, video-Scene-010.mp4, video-Scene-011.mp4, video-Scene-012.mp4, video-Scene-013.mp4, video-Scene-014.mp4, video-Scene-015.mp4, video-Scene-016.mp4, video-Scene-017.mp4, video-Scene-018.mp4, video-Scene-019.mp4, video-Scene-020.mp4, video-Scene-021.mp4"}

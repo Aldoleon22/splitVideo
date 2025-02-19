@@ -82,9 +82,11 @@ const handleImport = async () => {
 
     // Lancer l'upload en chunks
     await uploadInChunks(selectedFile)
-    
-    // Une fois l'upload terminé, lancer le traitement
-    await processVideo()
+    setSuccess("Vidéo uploadée avec succès !");
+    setProjectName('');
+    setSelectedFile(null);
+    setResolution('original');
+    if (fileInputRef.current) fileInputRef.current.value = '';
   } catch (error) {
     setError(error instanceof Error ? error.message : 'Une erreur inconnue est survenue')
   } finally {
@@ -187,8 +189,19 @@ const processVideo = async () => {
     setError(error instanceof Error ? error.message : 'Une erreur inconnue est survenue')
   }
 }
-
-
+const uploadInChunk: React.MouseEventHandler<HTMLButtonElement> = (event) => {
+    
+  const uploadFile = async () => {
+    if (selectedFile) {
+      await uploadInChunks(selectedFile);
+     
+    } else {
+      console.error('Aucun fichier sélectionné');
+    }
+  };
+setShowConfirmDialog(false)
+  uploadFile(); // Appeler la fonction asynchrone ici
+};
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <Header />
@@ -287,6 +300,7 @@ const processVideo = async () => {
         </main>
       </div>
 
+          
       <Dialog open={showConfirmDialog} onOpenChange={setShowConfirmDialog}>
         <DialogContent>
           <DialogHeader>
@@ -296,8 +310,10 @@ const processVideo = async () => {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setShowConfirmDialog(false)}>Annuler</Button>
-            <Button onClick={async () => {setShowConfirmDialog(false), await uploadInChunks(selectedFile!) }}>Confirmer</Button>
+            <Button variant="outline" onClick={() => setShowConfirmDialog(false)}>
+              Annuler
+            </Button>
+            <Button onClick={uploadInChunk}>Confirmer</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
