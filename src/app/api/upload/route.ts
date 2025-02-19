@@ -48,4 +48,3 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: false, message: 'Error saving the file', error: String(error) }, { status: 500 })
   }
 }
-

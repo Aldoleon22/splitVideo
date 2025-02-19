@@ -10,6 +10,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert"
 import { Loader } from "@/components/ui/loader"
+import { toast } from 'react-toastify';
+
 
 function AuthPageContent() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -19,7 +21,15 @@ function AuthPageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [info, setInfo] = useState<string | null>(null)
-
+  const showToast = () => {
+    toast.success(
+      "Un e-mail d'activation a été envoyé pour valider votre compte.",
+      {
+        position: 'top-right',
+        autoClose: 4000,
+      }
+    );
+  };
   useEffect(() => {
     const successParam = searchParams.get("success")
     const errorParam = searchParams.get("error")
@@ -97,6 +107,9 @@ function AuthPageContent() {
         if (emailInput) emailInput.value = ""
         if (passwordInput) passwordInput.value = ""
         if (confirmPasswordInput) confirmPasswordInput.value = ""
+
+         //nofication toastify//
+         showToast();
 
         setSuccessNotification("Inscription réussie. Un e-mail d'activation a été envoyé pour valider votre compte.")
         setSuccess("Inscription réussie. Un e-mail d'activation a été envoyé pour valider votre compte.")

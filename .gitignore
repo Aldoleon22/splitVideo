@@ -10,6 +10,8 @@
 !.yarn/releases
 !.yarn/versions
 /__MACOSX
+/projets
+/uploads
 # testing
 /coverage
 

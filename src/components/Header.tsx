@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import { useSession, signOut } from "next-auth/react"
 import Link from 'next/link'
 import { List, User, Settings, LogOut } from 'lucide-react'
+import { IoIosNotifications, IoMdCloudUpload } from 'react-icons/io';
+
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -69,8 +71,8 @@ export function Header() {
   }
   useEffect(() => {
     console.log(process.env.NEXT_PUBLIC_APP_URL)
-  },[isLoading])
-  
+  }, [isLoading])
+
 
   return (
     <header className="bg-gray-800 border-b border-gray-700">
@@ -81,32 +83,59 @@ export function Header() {
               Split Video
             </div>
           </Link>
-          <Link href="/tasks" className="flex items-center text-gray-300 hover:text-white">
-            <List className="w-5 h-5 mr-2" />
-            <span className="text-lg">File d'attente</span>
-          </Link>
+          
         </div>
-        <div className="flex items-center space-x-2">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" >
-                <User className="h-5 w-5" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onSelect={() => setIsSettingsOpen(true)}>
-                <Settings className="mr-2 h-4 w-4" />
-                <span>Paramètres</span>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onSelect={() => signOut({redirect: false, callbackUrl:process.env.NEXT_PUBLIC_APP_URL})}>
-                <LogOut className="mr-2 h-4 w-4" />
-                <span>Déconnexion</span>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+
+        {/* Conteneur des icônes côte à côte à droite */}
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 bg-light">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost">
+                  <IoMdCloudUpload className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem>
+                <Link href="/uploads" className="flex items-center text-gray-300 hover:text-white">
+                  <IoMdCloudUpload className="mr-2 h-4 w-4" />
+                  <span>Uploads</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <Link href="/tasks" className="flex items-center text-gray-300 hover:text-white">
+                    <IoIosNotifications className="mr-2 h-4 w-4" />
+                    <span>File d'attente</span>
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost">
+                  <User className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onSelect={() => setIsSettingsOpen(true)}>
+                  <Settings className="mr-2 h-4 w-4" />
+                  <span>Paramètres</span>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onSelect={() => signOut({ redirect: false, callbackUrl: process.env.NEXT_PUBLIC_APP_URL })}>
+                  <LogOut className="mr-2 h-4 w-4" />
+                  <span>Déconnexion</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
       </div>
+
 
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
         <DialogContent className="sm:max-w-[425px]">
