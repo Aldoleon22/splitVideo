@@ -14,6 +14,8 @@ import { Label } from "@/components/ui/label"
 import { encryptId } from '@/utils/cryptoUtils'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useProjectContext } from '@/contexts/ProjectContext'
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CHUNK_SIZE = 10 * 1024 * 1024 // 5 Mo par chunk
 
@@ -50,158 +52,169 @@ export default function HomePage() {
       setSelectedFile(event.target.files[0])
     }
   }
+ 
 
   
-
-const handleImport = async () => {
-  if (!projectName.trim()) {
-    setError("Le nom du projet est obligatoire.")
-    return
-  }
-
-  if (!selectedFile) {
-    setError("Veuillez sélectionner un fichier à importer.")
-    return
-  }
-
-  setIsLoading(true)
-  setError(null)
-  setSuccess(null)
-  setProgress(0)
-
-  try {
-    // Vérifier si le projet existe
-    const checkResponse = await fetch(`/api/check-project?projectName=${encodeURIComponent(projectName)}&userId=${encryptId(parseInt(session.user.id))}`)
-    const checkResult = await checkResponse.json()
-
-    if (checkResult.exists) {
-      setShowConfirmDialog(true)
-      setIsLoading(false)
-      return
+  const handleImport = async () => {
+    if (!projectName.trim()) {
+      setError("Le nom du projet est obligatoire.");
+      toast.warn("Le nom du projet est obligatoire.");
+      return;
     }
-
-    // Lancer l'upload en chunks
-    await uploadInChunks(selectedFile)
-    setSuccess("Vidéo uploadée avec succès !");
-    setProjectName('');
-    setSelectedFile(null);
-    setResolution('original');
-    if (fileInputRef.current) fileInputRef.current.value = '';
-  } catch (error) {
-    setError(error instanceof Error ? error.message : 'Une erreur inconnue est survenue')
-  } finally {
-    setIsLoading(false)
-  }
-}
-
-
-const uploadInChunks = async (file: File) => {
-  const totalChunks = Math.ceil(file.size / CHUNK_SIZE)
-  const userId = encryptId(parseInt(session.user.id))
-  const fileId = `${userId}-${Date.now()}`
-  const originalFileName = file.name // Nom du fichier original
-  let uploadSuccess = true
-
-  for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
-    const start = chunkIndex * CHUNK_SIZE
-    const end = Math.min(start + CHUNK_SIZE, file.size)
-    const chunk = file.slice(start, end)
-
-    const formData = new FormData()
-    formData.append("file", chunk)
-    formData.append("fileId", fileId)
-    formData.append("chunkIndex", chunkIndex.toString())
-    formData.append("totalChunks", totalChunks.toString())
-    formData.append("projectName", projectName)
-    formData.append("resolution", resolution)
-    formData.append("userId", userId)
-    formData.append("originalFileName", originalFileName) // Nom original
-
+  
+    if (!selectedFile) {
+      setError("Veuillez sélectionner un fichier à importer.");
+      toast.warn("Veuillez sélectionner un fichier à importer.");
+      return;
+    }
+  
+    setIsLoading(true);
+    setError(null);
+    setSuccess(null);
+    setProgress(0);
+  
     try {
-      const response = await fetch("/api/upload-chunks", {
-        method: "POST",
-        body: formData,
-      })
-
-      if (!response.ok) {
-        throw new Error(`Échec de l'envoi du chunk ${chunkIndex}`)
+      const checkResponse = await fetch(
+        `/api/check-project?projectName=${encodeURIComponent(projectName)}&userId=${encryptId(parseInt(session.user.id))}`
+      );
+      const checkResult = await checkResponse.json();
+  
+      if (checkResult.exists) {
+        setShowConfirmDialog(true);
+        setIsLoading(false);
+        toast.warn("Le projet existe déjà. Confirmation requise.");
+        return;
       }
-
-      setProgress(((chunkIndex + 1) / totalChunks) * 100)
-    } catch (error) {
-      console.error(`Erreur lors de l'upload du chunk ${chunkIndex}:`, error)
-      uploadSuccess = false
-      break // Vous pouvez aussi choisir de réessayer ici ou continuer avec des retries
-    }
-  }
-
-  if (uploadSuccess) {
-    // Une fois tous les chunks envoyés, demander l'assemblage
-    await mergeChunks(fileId, originalFileName) // Passer le nom original
-    await processVideo()
-  } else {
-    console.error('L\'upload a échoué, veuillez réessayer plus tard.')
-  }
-}
-
-
-const mergeChunks = async (fileId: string, originalFileName: string) => {
-  try {
-    const mergeResponse = await fetch("/api/merge-chunks", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ fileId, projectName, resolution, userId: encryptId(parseInt(session.user.id)), originalFileName }), // Passer le nom original
-    })
-
-    if (!mergeResponse.ok) {
-      throw new Error("Échec de l'assemblage du fichier.")
-    }
-
-    setSuccess("Vidéo uploadée avec succès !")
-  } catch (error) {
-    setError(`Erreur d'assemblage : ${error instanceof Error ? error.message : error}`)
-    throw error
-  }
-}
-
-
-const processVideo = async () => {
-  try {
-    const processResponse = await fetch('/api/process-video', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        projectName, 
-        resolution,
-        userId: encryptId(parseInt(session.user.id))
-      }),
-    })
-
-    const result = await processResponse.json()
-
-    if (!processResponse.ok) {
-      throw new Error(result.message || 'Une erreur est survenue lors de l\'ajout à la file d\'attente')
-    }
-
-    setSuccess(`La vidéo a été ajoutée à la file d'attente pour traitement. ID de la tâche : ${result.queueId}`)
-    await refreshProjects()
-  } catch (error) {
-    setError(error instanceof Error ? error.message : 'Une erreur inconnue est survenue')
-  }
-}
-const uploadInChunk: React.MouseEventHandler<HTMLButtonElement> = (event) => {
-    
-  const uploadFile = async () => {
-    if (selectedFile) {
+  
       await uploadInChunks(selectedFile);
-     
-    } else {
-      console.error('Aucun fichier sélectionné');
+      setSuccess("Vidéo uploadée avec succès !");
+      toast.success("Vidéo uploadée avec succès !");
+      setProjectName("");
+      setSelectedFile(null);
+      setResolution("original");
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Une erreur inconnue est survenue";
+      setError(errorMessage);
+      toast.error(`Erreur : ${errorMessage}`);
+    } finally {
+      setIsLoading(false);
     }
   };
-setShowConfirmDialog(false)
-  uploadFile(); // Appeler la fonction asynchrone ici
-};
+  
+  const uploadInChunks = async (file: File) => {
+    const totalChunks = Math.ceil(file.size / CHUNK_SIZE);
+    const userId = encryptId(parseInt(session.user.id));
+    const fileId = `${userId}-${Date.now()}`;
+    const originalFileName = file.name;
+    let uploadSuccess = true;
+  
+    for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
+      const start = chunkIndex * CHUNK_SIZE;
+      const end = Math.min(start + CHUNK_SIZE, file.size);
+      const chunk = file.slice(start, end);
+  
+      const formData = new FormData();
+      formData.append("file", chunk);
+      formData.append("fileId", fileId);
+      formData.append("chunkIndex", chunkIndex.toString());
+      formData.append("totalChunks", totalChunks.toString());
+      formData.append("projectName", projectName);
+      formData.append("resolution", resolution);
+      formData.append("userId", userId);
+      formData.append("originalFileName", originalFileName);
+  
+      try {
+        const response = await fetch("/api/upload-chunks", {
+          method: "POST",
+          body: formData,
+        });
+  
+        if (!response.ok) {
+          throw new Error(`Échec de l'envoi du chunk ${chunkIndex}`);
+        }
+  
+        setProgress(((chunkIndex + 1) / totalChunks) * 100);
+      } catch (error) {
+        console.error(`Erreur lors de l'upload du chunk ${chunkIndex}:`, error);
+        toast.error(`Erreur upload chunk ${chunkIndex}`);
+        uploadSuccess = false;
+        break;
+      }
+    }
+  
+    if (uploadSuccess) {
+      await mergeChunks(fileId, originalFileName);
+      await processVideo();
+    } else {
+      console.error("L'upload a échoué, veuillez réessayer plus tard.");
+      toast.error("L'upload a échoué, veuillez réessayer plus tard.");
+    }
+  };
+  
+  const mergeChunks = async (fileId: string, originalFileName: string) => {
+    try {
+      const mergeResponse = await fetch("/api/merge-chunks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fileId, projectName, resolution, userId: encryptId(parseInt(session.user.id)), originalFileName }),
+      });
+  
+      if (!mergeResponse.ok) {
+        throw new Error("Échec de l'assemblage du fichier.");
+      }
+  
+      setSuccess("Vidéo assemblée avec succès !");
+      toast.success("Vidéo assemblée avec succès !");
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Erreur d'assemblage inconnue";
+      setError(errorMessage);
+      toast.error(`Erreur d'assemblage : ${errorMessage}`);
+      throw error;
+    }
+  };
+  
+  const processVideo = async () => {
+    try {
+      const processResponse = await fetch("/api/process-video", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          projectName,
+          resolution,
+          userId: encryptId(parseInt(session.user.id)),
+        }),
+      });
+  
+      const result = await processResponse.json();
+  
+      if (!processResponse.ok) {
+        throw new Error(result.message || "Erreur lors de l'ajout à la file d'attente");
+      }
+  
+      setSuccess(`Vidéo ajoutée à la file d'attente. ID tâche : ${result.queueId}`);
+      toast.success(`Vidéo en file d'attente. ID tâche : ${result.queueId}`);
+      await refreshProjects();
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Une erreur inconnue est survenue";
+      setError(errorMessage);
+      toast.error(errorMessage);
+    }
+  };
+  
+  const uploadInChunk: React.MouseEventHandler<HTMLButtonElement> = (event) => {
+    const uploadFile = async () => {
+      if (selectedFile) {
+        await uploadInChunks(selectedFile);
+      } else {
+        console.error("Aucun fichier sélectionné");
+        toast.warn("Aucun fichier sélectionné");
+      }
+    };
+    setShowConfirmDialog(false);
+    uploadFile();
+  };
+  
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <Header />
@@ -283,19 +296,7 @@ setShowConfirmDialog(false)
               </Button>
             </div>
 
-            {error && (
-              <Alert variant="destructive">
-                <AlertTitle>Erreur</AlertTitle>
-                <AlertDescription>{error}</AlertDescription>
-              </Alert>
-            )}
-
-            {success && (
-              <Alert variant="default" className="bg-green-100 border-green-400 text-green-700">
-                <AlertTitle>Succès</AlertTitle>
-                <AlertDescription>{success}</AlertDescription>
-              </Alert>
-            )}
+          
           </div>
         </main>
       </div>
