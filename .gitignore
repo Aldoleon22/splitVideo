@@ -12,6 +12,7 @@
 /__MACOSX
 /projets
 /uploads
+/prisma/splitvideo.db
 # testing
 /coverage
 
