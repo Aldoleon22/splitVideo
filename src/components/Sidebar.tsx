@@ -1,35 +1,24 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { useSession } from "next-auth/react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
 import { encryptId } from "@/utils/cryptoUtils"
 import { Loader } from "@/components/ui/loader"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog"
 import { useProjectContext } from "@/contexts/ProjectContext"
+import { motion } from "framer-motion"
 
 export function Sidebar() {
-  const router = useRouter()
   const { data: session, status } = useSession()
-  const { projects, refreshProjects, triggerTasksRefresh } = useProjectContext()
+  const { projects, refreshProjects } = useProjectContext()
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false)
-  const [projectToDelete, setProjectToDelete] = useState<number | null>(null)
-  const [isDeletingProject, setIsDeletingProject] = useState(false)
-  
-  const [visibleProjects, setVisibleProjects] = useState(10) // Nombre initial de projets affichés
-  const loaderRef = useRef(null) // Référence pour détecter la fin du scroll
+  const [currentPage, setCurrentPage] = useState(1)
+  const projectsPerPage = 10
+  const [direction, setDirection] = useState(1)
+  const [isScrolling, setIsScrolling] = useState(false) // Pour éviter un changement trop rapide de page
+  const scrollThreshold = 100 // Seuil de distance pour activer le changement de page
 
   useEffect(() => {
     if (status === "authenticated") {
@@ -44,105 +33,42 @@ export function Sidebar() {
           setIsLoading(false)
         }
       }
-
       fetchProjects()
     }
   }, [status, refreshProjects])
 
-  // Fonction pour observer le scroll et charger plus de projets
+  const totalPages = Math.ceil(projects.length / projectsPerPage)
+  const indexOfLastProject = currentPage * projectsPerPage
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage
+  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject)
+
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && visibleProjects < projects.length) {
-          setVisibleProjects((prev) => prev + 10) // Ajoute 10 projets de plus
+    const handleScroll = (event) => {
+      if (isScrolling) return // Évite de changer de page si un changement est déjà en cours
+
+      const scrollDistance = event.deltaY
+
+      if (Math.abs(scrollDistance) > scrollThreshold) {
+        setIsScrolling(true)
+
+        if (scrollDistance > 0 && currentPage < totalPages) {
+          setDirection(1)
+          setCurrentPage((prev) => prev + 1)
+        } else if (scrollDistance < 0 && currentPage > 1) {
+          setDirection(-1)
+          setCurrentPage((prev) => prev - 1)
         }
-      },
-      { threshold: 1.0 } // Se déclenche quand l'élément est complètement visible
-    )
 
-    if (loaderRef.current) {
-      observer.observe(loaderRef.current)
-    }
-
-    return () => {
-      if (loaderRef.current) {
-        observer.unobserve(loaderRef.current)
+        // Remettre le flag après un délai pour éviter un changement rapide
+        setTimeout(() => {
+          setIsScrolling(false)
+        }, 500) // Attendre 500ms avant de pouvoir changer de page à nouveau
       }
     }
-  }, [visibleProjects, projects.length])
 
-  const deleteProject = async (id: number) => {
-    setProjectToDelete(id)
-    setIsDeleteDialogOpen(true)
-  }
-
-  const confirmDelete = async () => {
-    if (projectToDelete === null) return
-
-    setIsDeletingProject(true)
-    try {
-      const response = await fetch(`/api/projects/${encryptId(projectToDelete)}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ action: "delete", projectToDelete: encryptId(projectToDelete) }),
-      })
-
-      let errorMessage = "Échec de la suppression du projet"
-      if (!response.ok) {
-        try {
-          const errorData = await response.json()
-          errorMessage = errorData.error || errorMessage
-        } catch (jsonError) {
-          console.error("Error parsing JSON:", jsonError)
-          errorMessage = `${errorMessage}: ${response.statusText}`
-        }
-        throw new Error(errorMessage)
-      }
-
-      await refreshProjects()
-      triggerTasksRefresh() // Rafraîchir la liste des tâches
-      setIsDeleteDialogOpen(false)
-      setProjectToDelete(null)
-    } catch (err) {
-      console.error("Error deleting project:", err)
-      setError(err instanceof Error ? err.message : "Une erreur inconnue est survenue")
-    } finally {
-      setIsDeletingProject(false)
-    }
-  }
-
-  const renderProjectItem = (project: { id: number; projectName: string }) => (
-    <div key={project.id} className="group">
-      <Link
-        href={`/projet/${encryptId(project.id)}`}
-        className="flex items-center justify-between p-2 rounded text-gray-300 hover:bg-gray-700"
-      >
-        <span className="text-sm truncate">{project.projectName}</span>
-        <Button
-          variant="ghost"
-          size="sm"
-          className="opacity-0 group-hover:opacity-100 bg-yellow-600 hover:bg-yellow-700 text-white"
-          onClick={(e) => {
-            e.preventDefault()
-            e.stopPropagation()
-            deleteProject(project.id)
-          }}
-        >
-          Supprimer
-        </Button>
-      </Link>
-    </div>
-  )
-
-  if (isLoading) {
-    return (
-      <aside className="w-64 bg-gray-800 min-h-screen p-4 flex justify-center items-center">
-        <Loader className="w-8 h-8" />
-      </aside>
-    )
-  }
+    window.addEventListener("wheel", handleScroll)
+    return () => window.removeEventListener("wheel", handleScroll)
+  }, [currentPage, totalPages, isScrolling])
 
   return (
     <aside className="w-64 bg-gray-800 min-h-screen p-4 flex flex-col">
@@ -155,40 +81,28 @@ export function Sidebar() {
         ) : projects.length === 0 ? (
           <div className="text-sm text-gray-500">Aucun projet importé pour le moment</div>
         ) : (
-          <ScrollArea className="h-[calc(100vh-180px)]">
-            {projects.slice(0, visibleProjects).map(renderProjectItem)}
-            <div ref={loaderRef} className="h-10 flex justify-center items-center">
-              {visibleProjects < projects.length && <Loader className="w-6 h-6 animate-spin text-gray-400" />}
-            </div>
+          <ScrollArea className="h-[calc(100vh-180px)] overflow-hidden">
+            <motion.div
+              key={currentPage}
+              initial={{ opacity: 0, y: direction * 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -direction * 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              {currentProjects.map((project) => (
+                <div key={project.id} className="group transition-opacity duration-300">
+                  <Link
+                    href={`/projet/${encryptId(project.id)}`}
+                    className="flex items-center justify-between p-2 rounded text-gray-300 hover:bg-gray-700"
+                  >
+                    <span className="text-sm truncate">{project.projectName}</span>
+                  </Link>
+                </div>
+              ))}
+            </motion.div>
           </ScrollArea>
         )}
       </div>
-
-      <Dialog open={isDeleteDialogOpen} onOpenChange={setIsDeleteDialogOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Confirmer la suppression</DialogTitle>
-            <DialogDescription>
-              Êtes-vous sûr de vouloir supprimer ce projet ? Cette action est irréversible.
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setIsDeleteDialogOpen(false)} disabled={isDeletingProject}>
-              Annuler
-            </Button>
-            <Button variant="destructive" onClick={confirmDelete} disabled={isDeletingProject}>
-              {isDeletingProject ? (
-                <>
-                  <Loader className="mr-2 h-4 w-4 animate-spin" />
-                  Suppression...
-                </>
-              ) : (
-                "Supprimer"
-              )}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </aside>
   )
 }

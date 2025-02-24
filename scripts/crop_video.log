@@ -451,3 +451,175 @@
   $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
 2025-02-21 22:55:48,932 - INFO - Output folder:
   $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:55:58,681 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/sfjidfhsdiofhsdo
+2025-02-21 22:55:58,681 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+2025-02-21 22:55:59,106 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/sdjfkdlfjsd
+2025-02-21 22:55:59,107 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/sdjfkdlfjsd
+2025-02-21 22:55:59,107 - INFO - Project name: sdjfkdlfjsd
+2025-02-21 22:55:59,107 - INFO - Resolution: original
+2025-02-21 22:55:59,107 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/sdjfkdlfjsd/video.mp4
+2025-02-21 22:55:59,121 - INFO - Detecting scenes...
+2025-02-21 22:56:00,899 - INFO - Detected 21 scenes
+2025-02-21 22:56:00,899 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:56:00,899 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:56:10,401 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/sdjfkdlfjsd
+2025-02-21 22:56:10,401 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+2025-02-21 22:56:10,807 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ooooo
+2025-02-21 22:56:10,808 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ooooo
+2025-02-21 22:56:10,808 - INFO - Project name: ooooo
+2025-02-21 22:56:10,808 - INFO - Resolution: original
+2025-02-21 22:56:10,808 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ooooo/video.mp4
+2025-02-21 22:56:10,823 - INFO - Detecting scenes...
+2025-02-21 22:56:12,521 - INFO - Detected 21 scenes
+2025-02-21 22:56:12,522 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:56:12,522 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:56:22,656 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ooooo
+2025-02-21 22:56:22,656 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+2025-02-21 22:56:23,093 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tititititi
+2025-02-21 22:56:23,093 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tititititi
+2025-02-21 22:56:23,093 - INFO - Project name: tititititi
+2025-02-21 22:56:23,094 - INFO - Resolution: original
+2025-02-21 22:56:23,094 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/tititititi/video.mp4
+2025-02-21 22:56:23,108 - INFO - Detecting scenes...
+2025-02-21 22:56:24,879 - INFO - Detected 21 scenes
+2025-02-21 22:56:24,879 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:56:24,880 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:56:35,101 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/tititititi
+2025-02-21 22:56:35,102 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+2025-02-21 22:56:35,532 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/jnjjkh
+2025-02-21 22:56:35,532 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/jnjjkh
+2025-02-21 22:56:35,533 - INFO - Project name: jnjjkh
+2025-02-21 22:56:35,533 - INFO - Resolution: original
+2025-02-21 22:56:35,533 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/jnjjkh/video.mp4
+2025-02-21 22:56:35,545 - INFO - Detecting scenes...
+2025-02-21 22:56:37,652 - INFO - Detected 21 scenes
+2025-02-21 22:56:37,652 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:56:37,653 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:56:49,349 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/jnjjkh
+2025-02-21 22:56:49,350 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+2025-02-21 22:56:49,806 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/dhdkhuifhduifz
+2025-02-21 22:56:49,806 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/dhdkhuifhduifz
+2025-02-21 22:56:49,806 - INFO - Project name: dhdkhuifhduifz
+2025-02-21 22:56:49,806 - INFO - Resolution: original
+2025-02-21 22:56:49,806 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/dhdkhuifhduifz/video.mp4
+2025-02-21 22:56:49,819 - INFO - Detecting scenes...
+2025-02-21 22:56:51,990 - INFO - Detected 21 scenes
+2025-02-21 22:56:51,990 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:56:51,990 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:57:02,418 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/dhdkhuifhduifz
+2025-02-21 22:57:02,419 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+2025-02-21 22:59:55,333 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZA
+2025-02-21 22:59:55,333 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZA
+2025-02-21 22:59:55,334 - INFO - Project name: testAZA
+2025-02-21 22:59:55,335 - INFO - Resolution: original
+2025-02-21 22:59:55,335 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/testAZA/video.mp4
+2025-02-21 22:59:55,365 - INFO - Detecting scenes...
+2025-02-21 22:59:58,353 - INFO - Detected 21 scenes
+2025-02-21 22:59:58,353 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 22:59:58,353 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-21 23:00:13,527 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/testAZA
+2025-02-21 23:00:13,527 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4
+2025-02-24 08:17:37,714 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbdkjgk
+2025-02-24 08:17:37,715 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbdkjgk
+2025-02-24 08:17:37,716 - INFO - Project name: test 1gbdkjgk
+2025-02-24 08:17:37,716 - INFO - Resolution: original
+2025-02-24 08:17:37,716 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbdkjgk/LJO _ EP VALISE FULL ALBUM.mp4
+2025-02-24 08:17:37,806 - INFO - Detecting scenes...
+2025-02-24 08:19:49,670 - INFO - Detected 0 scenes
+2025-02-24 08:19:49,670 - WARNING - No scenes detected in the video.
+2025-02-24 08:19:49,670 - INFO - Files in output folder: 
+2025-02-24 08:19:50,140 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb fjdfdjsl
+2025-02-24 08:19:50,140 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gb fjdfdjsl
+2025-02-24 08:19:50,140 - INFO - Project name: test 1gb fjdfdjsl
+2025-02-24 08:19:50,141 - INFO - Resolution: original
+2025-02-24 08:19:50,141 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gb fjdfdjsl/LJO _ EP VALISE FULL ALBUM.mp4
+2025-02-24 08:19:50,161 - INFO - Detecting scenes...
+2025-02-24 08:21:45,627 - INFO - Detected 0 scenes
+2025-02-24 08:21:45,627 - WARNING - No scenes detected in the video.
+2025-02-24 08:21:45,627 - INFO - Files in output folder: 
+2025-02-24 08:23:49,653 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/jdlhkhk
+2025-02-24 08:23:49,653 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/jdlhkhk
+2025-02-24 08:23:49,653 - INFO - Project name: jdlhkhk
+2025-02-24 08:23:49,653 - INFO - Resolution: original
+2025-02-24 08:23:49,654 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/jdlhkhk/LJO _ EP VALISE FULL ALBUM.mp4
+2025-02-24 08:23:49,678 - INFO - Detecting scenes...
+2025-02-24 08:25:26,710 - INFO - Detected 0 scenes
+2025-02-24 08:25:26,710 - WARNING - No scenes detected in the video.
+2025-02-24 08:25:26,710 - INFO - Files in output folder: 
+2025-02-24 08:28:30,114 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ttrtrt
+2025-02-24 08:28:30,114 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ttrtrt
+2025-02-24 08:28:30,114 - INFO - Project name: ttrtrt
+2025-02-24 08:28:30,114 - INFO - Resolution: original
+2025-02-24 08:28:30,115 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/ttrtrt/Laco - Fitia hafa kely (Clip officiel 2024).mp4
+2025-02-24 08:28:30,127 - INFO - Detecting scenes...
+2025-02-24 08:28:44,349 - INFO - Detected 57 scenes
+2025-02-24 08:28:44,349 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 08:28:44,349 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 08:29:51,439 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/ttrtrt
+2025-02-24 08:29:51,439 - INFO - Files in output folder: Laco - Fitia hafa kely (Clip officiel 2024)-Scene-012.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-037.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-054.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-040.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-038.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-029.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-017.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-050.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-044.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-048.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-055.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-051.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-039.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-020.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-057.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-005.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-004.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-043.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-022.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-009.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-013.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-034.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-031.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-007.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-010.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-047.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-025.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-018.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-049.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-056.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-014.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-027.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-019.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-021.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-003.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-030.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-042.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-053.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-032.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-041.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-001.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-036.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-052.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-023.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-046.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-002.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-006.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-033.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-024.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-028.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-035.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-045.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-008.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-016.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-015.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-026.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-011.mp4
+2025-02-24 08:35:07,350 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/kdkj
+2025-02-24 08:35:07,350 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/kdkj
+2025-02-24 08:35:07,351 - INFO - Project name: kdkj
+2025-02-24 08:35:07,351 - INFO - Resolution: original
+2025-02-24 08:35:07,351 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/kdkj/Laco-Kintana (Chapitre 2).mp4
+2025-02-24 08:35:07,385 - INFO - Detecting scenes...
+2025-02-24 08:35:51,078 - INFO - Detected 54 scenes
+2025-02-24 08:35:51,079 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 08:35:51,079 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 08:38:25,061 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/kdkj
+2025-02-24 08:38:25,062 - INFO - Files in output folder: Laco-Kintana (Chapitre 2)-Scene-023.mp4, Laco-Kintana (Chapitre 2)-Scene-018.mp4, Laco-Kintana (Chapitre 2)-Scene-045.mp4, Laco-Kintana (Chapitre 2)-Scene-013.mp4, Laco-Kintana (Chapitre 2)-Scene-033.mp4, Laco-Kintana (Chapitre 2)-Scene-024.mp4, Laco-Kintana (Chapitre 2)-Scene-017.mp4, Laco-Kintana (Chapitre 2)-Scene-052.mp4, Laco-Kintana (Chapitre 2)-Scene-022.mp4, Laco-Kintana (Chapitre 2)-Scene-005.mp4, Laco-Kintana (Chapitre 2)-Scene-043.mp4, Laco-Kintana (Chapitre 2)-Scene-007.mp4, Laco-Kintana (Chapitre 2)-Scene-025.mp4, Laco-Kintana (Chapitre 2)-Scene-036.mp4, Laco-Kintana (Chapitre 2)-Scene-032.mp4, Laco-Kintana (Chapitre 2)-Scene-053.mp4, Laco-Kintana (Chapitre 2)-Scene-015.mp4, Laco-Kintana (Chapitre 2)-Scene-051.mp4, Laco-Kintana (Chapitre 2)-Scene-048.mp4, Laco-Kintana (Chapitre 2)-Scene-021.mp4, Laco-Kintana (Chapitre 2)-Scene-047.mp4, Laco-Kintana (Chapitre 2)-Scene-034.mp4, Laco-Kintana (Chapitre 2)-Scene-010.mp4, Laco-Kintana (Chapitre 2)-Scene-046.mp4, Laco-Kintana (Chapitre 2)-Scene-012.mp4, Laco-Kintana (Chapitre 2)-Scene-041.mp4, Laco-Kintana (Chapitre 2)-Scene-027.mp4, Laco-Kintana (Chapitre 2)-Scene-039.mp4, Laco-Kintana (Chapitre 2)-Scene-020.mp4, Laco-Kintana (Chapitre 2)-Scene-002.mp4, Laco-Kintana (Chapitre 2)-Scene-044.mp4, Laco-Kintana (Chapitre 2)-Scene-004.mp4, Laco-Kintana (Chapitre 2)-Scene-006.mp4, Laco-Kintana (Chapitre 2)-Scene-042.mp4, Laco-Kintana (Chapitre 2)-Scene-008.mp4, Laco-Kintana (Chapitre 2)-Scene-037.mp4, Laco-Kintana (Chapitre 2)-Scene-050.mp4, Laco-Kintana (Chapitre 2)-Scene-009.mp4, Laco-Kintana (Chapitre 2)-Scene-028.mp4, Laco-Kintana (Chapitre 2)-Scene-049.mp4, Laco-Kintana (Chapitre 2)-Scene-035.mp4, Laco-Kintana (Chapitre 2)-Scene-014.mp4, Laco-Kintana (Chapitre 2)-Scene-038.mp4, Laco-Kintana (Chapitre 2)-Scene-001.mp4, Laco-Kintana (Chapitre 2)-Scene-030.mp4, Laco-Kintana (Chapitre 2)-Scene-026.mp4, Laco-Kintana (Chapitre 2)-Scene-011.mp4, Laco-Kintana (Chapitre 2)-Scene-003.mp4, Laco-Kintana (Chapitre 2)-Scene-054.mp4, Laco-Kintana (Chapitre 2)-Scene-040.mp4, Laco-Kintana (Chapitre 2)-Scene-029.mp4, Laco-Kintana (Chapitre 2)-Scene-019.mp4, Laco-Kintana (Chapitre 2)-Scene-016.mp4, Laco-Kintana (Chapitre 2)-Scene-031.mp4
+2025-02-24 08:38:25,518 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbsdhsdlh
+2025-02-24 08:38:25,518 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbsdhsdlh
+2025-02-24 08:38:25,518 - INFO - Project name: test 1gbsdhsdlh
+2025-02-24 08:38:25,518 - INFO - Resolution: original
+2025-02-24 08:38:25,518 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/test 1gbsdhsdlh/Laco - Fitia hafa kely (Clip officiel 2024).mp4
+2025-02-24 08:38:25,528 - INFO - Detecting scenes...
+2025-02-24 08:38:41,925 - INFO - Detected 57 scenes
+2025-02-24 08:38:41,926 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 08:38:41,926 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 08:39:48,343 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/test 1gbsdhsdlh
+2025-02-24 08:39:48,343 - INFO - Files in output folder: Laco - Fitia hafa kely (Clip officiel 2024)-Scene-012.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-037.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-054.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-040.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-038.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-029.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-017.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-050.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-044.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-048.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-055.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-051.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-039.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-020.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-057.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-005.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-004.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-043.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-022.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-009.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-013.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-034.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-031.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-007.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-010.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-047.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-025.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-018.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-049.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-056.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-014.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-027.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-019.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-021.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-003.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-030.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-042.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-053.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-032.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-041.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-001.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-036.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-052.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-023.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-046.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-002.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-006.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-033.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-024.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-028.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-035.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-045.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-008.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-016.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-015.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-026.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-011.mp4
+2025-02-24 08:39:49,103 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/fjlfflzhefilzeh
+2025-02-24 08:39:49,103 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/fjlfflzhefilzeh
+2025-02-24 08:39:49,103 - INFO - Project name: fjlfflzhefilzeh
+2025-02-24 08:39:49,103 - INFO - Resolution: original
+2025-02-24 08:39:49,103 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/fjlfflzhefilzeh/Laco - Fitia hafa kely (Clip officiel 2024).mp4
+2025-02-24 08:39:49,117 - INFO - Detecting scenes...
+2025-02-24 08:40:01,573 - INFO - Detected 57 scenes
+2025-02-24 08:40:01,573 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 08:40:01,573 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 08:41:23,984 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/fjlfflzhefilzeh
+2025-02-24 08:41:23,984 - INFO - Files in output folder: Laco - Fitia hafa kely (Clip officiel 2024)-Scene-012.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-037.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-054.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-040.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-038.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-029.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-017.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-050.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-044.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-048.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-055.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-051.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-039.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-020.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-057.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-005.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-004.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-043.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-022.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-009.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-013.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-034.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-031.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-007.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-010.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-047.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-025.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-018.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-049.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-056.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-014.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-027.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-019.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-021.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-003.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-030.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-042.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-053.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-032.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-041.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-001.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-036.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-052.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-023.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-046.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-002.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-006.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-033.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-024.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-028.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-035.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-045.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-008.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-016.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-015.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-026.mp4, Laco - Fitia hafa kely (Clip officiel 2024)-Scene-011.mp4
+2025-02-24 15:53:17,056 - INFO - Input folder: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/zefhzefhzejkhfkehfzefhzejfhjfhfjzehfzjhfzu
+2025-02-24 15:53:17,056 - INFO - Output folder: /home/aldo/Documents/splitVideo/projets/00056/processed_videos/zefhzefhzejkhfkehfzefhzejfhjfhfjzehfzjhfzu
+2025-02-24 15:53:17,056 - INFO - Project name: zefhzefhzejkhfkehfzefhzejfhjfhfjzehfzjhfzu
+2025-02-24 15:53:17,056 - INFO - Resolution: original
+2025-02-24 15:53:17,057 - INFO - Processing file: /home/aldo/Documents/splitVideo/projets/00056/uploaded_videos/zefhzefhzejkhfkehfzefhzejfhjfhfjzehfzjhfzu/video.mp4
+2025-02-24 15:53:17,134 - INFO - Detecting scenes...
+2025-02-24 15:53:20,000 - INFO - Detected 21 scenes
+2025-02-24 15:53:20,000 - INFO - Splitting video with ffmpeg, output path template:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 15:53:20,001 - INFO - Output folder:
+  $VIDEO_NAME-Scene-$SCENE_NUMBER.mp4
+2025-02-24 15:53:35,319 - INFO - Video successfully processed and saved in /home/aldo/Documents/splitVideo/projets/00056/processed_videos/zefhzefhzejkhfkehfzefhzejfhjfhfjzehfzjhfzu
+2025-02-24 15:53:35,319 - INFO - Files in output folder: video-Scene-013.mp4, video-Scene-017.mp4, video-Scene-006.mp4, video-Scene-011.mp4, video-Scene-008.mp4, video-Scene-010.mp4, video-Scene-009.mp4, video-Scene-020.mp4, video-Scene-016.mp4, video-Scene-003.mp4, video-Scene-005.mp4, video-Scene-001.mp4, video-Scene-014.mp4, video-Scene-002.mp4, video-Scene-018.mp4, video-Scene-015.mp4, video-Scene-019.mp4, video-Scene-012.mp4, video-Scene-007.mp4, video-Scene-004.mp4, video-Scene-021.mp4

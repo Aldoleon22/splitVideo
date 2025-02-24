@@ -19,12 +19,16 @@ interface Task {
   updatedAt: string
 }
 
+const ITEMS_PER_PAGE = 7
+
 export default function TasksPage() {
   const { data: session, status } = useSession()
   const router = useRouter()
   const [tasks, setTasks] = useState<Task[]>([])
   const [loading, setLoading] = useState(true)
   const { tasksRefreshTrigger } = useProjectContext()
+  
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -60,7 +64,6 @@ export default function TasksPage() {
       if (!response.ok) {
         throw new Error("Erreur lors de la suppression de la tâche")
       }
-      // Mettre à jour l'état local après une suppression réussie
       setTasks(tasks.filter((task) => task.id !== taskId))
     } catch (error) {
       console.error("Erreur lors de la suppression:", error)
@@ -80,6 +83,13 @@ export default function TasksPage() {
     return null
   }
 
+  // Pagination
+  const totalPages = Math.ceil(tasks.length / ITEMS_PER_PAGE)
+  const paginatedTasks = tasks.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  )
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <Header />
@@ -87,10 +97,35 @@ export default function TasksPage() {
         <Sidebar />
         <main className="flex-1 p-6">
           <h1 className="text-2xl font-bold mb-4">Tâches en cours</h1>
-          <TaskList tasks={tasks} onDeleteTask={deleteTask} />
+
+          <TaskList tasks={paginatedTasks} onDeleteTask={deleteTask} />
+
+          {/* Pagination */}
+          <div className="flex justify-center mt-4 space-x-4">
+            <button
+              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              className={`px-4 py-2 rounded-md ${
+                currentPage === 1 ? "bg-gray-700 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
+              }`}
+            >
+              Précédent
+            </button>
+
+            <span className="px-4 py-2">{currentPage} / {totalPages}</span>
+
+            <button
+              onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+              disabled={currentPage === totalPages}
+              className={`px-4 py-2 rounded-md ${
+                currentPage === totalPages ? "bg-gray-700 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
+              }`}
+            >
+              Suivant
+            </button>
+          </div>
         </main>
       </div>
     </div>
   )
 }
-

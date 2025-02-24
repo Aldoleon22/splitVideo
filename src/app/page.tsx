@@ -15,9 +15,9 @@ import { encryptId } from '@/utils/cryptoUtils'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useProjectContext } from '@/contexts/ProjectContext'
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
-const CHUNK_SIZE = 10 * 1024 * 1024 // 5 Mo par chunk
+
+const CHUNK_SIZE = 1 * 1024 * 1024 // 5 Mo par chunk
 
 export default function HomePage() {
   const { data: session, status } = useSession()
@@ -294,6 +294,11 @@ export default function HomePage() {
                 {isLoading ? <Loader className="mr-2 h-4 w-4" /> : null}
                 Importer
               </Button>
+              <progress 
+        value={progress} 
+        max={100} 
+        className="w-full h-2 bg-gray-700 border-gray-600 appearance-none"  
+          />
             </div>
 
           

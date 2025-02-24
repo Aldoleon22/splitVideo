@@ -21,6 +21,8 @@ interface Scene {
   size: string
 }
 
+const ITEMS_PER_PAGE = 6
+
 export default function ProjectPage() {
   const params = useParams()
   const id = params?.id as string
@@ -31,6 +33,7 @@ export default function ProjectPage() {
   const [projectName, setProjectName] = useState<string>("")
   const [error, setError] = useState<string | null>(null)
   const { scenesRefreshTrigger } = useProjectContext()
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     const fetchScenes = async () => {
@@ -95,6 +98,9 @@ export default function ProjectPage() {
     window.location.href = url
   }
 
+  const totalPages = Math.ceil(scenes.length / ITEMS_PER_PAGE)
+  const displayedScenes = scenes.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <Header />
@@ -121,17 +127,17 @@ export default function ProjectPage() {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="whitespace-nowrap">Nom du fichier</TableHead>
-                      <TableHead className="whitespace-nowrap">Durée</TableHead>
-                      <TableHead className="whitespace-nowrap">Codec</TableHead>
-                      <TableHead className="whitespace-nowrap">Résolution</TableHead>
-                      <TableHead className="whitespace-nowrap">Bitrate</TableHead>
-                      <TableHead className="whitespace-nowrap">Taille</TableHead>
-                      <TableHead className="whitespace-nowrap">Action</TableHead>
+                      <TableHead>Nom du fichier</TableHead>
+                      <TableHead>Durée</TableHead>
+                      <TableHead>Codec</TableHead>
+                      <TableHead>Résolution</TableHead>
+                      <TableHead>Bitrate</TableHead>
+                      <TableHead>Taille</TableHead>
+                      <TableHead>Action</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {scenes.map((scene) => (
+                    {displayedScenes.map((scene) => (
                       <TableRow key={scene.id}>
                         <TableCell>{scene.fileName}</TableCell>
                         <TableCell>{scene.duration}</TableCell>
@@ -154,6 +160,31 @@ export default function ProjectPage() {
                   </TableBody>
                 </Table>
               </div>
+
+              <div className="flex justify-center items-center space-x-4 mt-4">
+  <Button
+    disabled={currentPage === 1}
+    onClick={() => setCurrentPage(currentPage - 1)}
+    className={`px-4 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-200 focus:outline-none ${
+      currentPage === 1 ? "bg-gray-500 cursor-not-allowed" : ""
+    }`}
+  >
+    Précédent
+  </Button>
+  <span className="text-white text-lg font-semibold">
+    {currentPage}/{totalPages}
+  </span>
+  <Button
+    disabled={currentPage === totalPages}
+    onClick={() => setCurrentPage(currentPage + 1)}
+    className={`px-4 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-200 focus:outline-none ${
+      currentPage === totalPages ? "bg-gray-500 cursor-not-allowed" : ""
+    }`}
+  >
+    Suivant
+  </Button>
+</div>
+
             </div>
           )}
         </div>
@@ -161,4 +192,3 @@ export default function ProjectPage() {
     </div>
   )
 }
-

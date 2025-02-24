@@ -24,26 +24,30 @@ export const TaskList: React.FC<TaskListProps> = ({ tasks, onDeleteTask }) => {
 
   return (
     <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>Projet</TableHead>
-          <TableHead>Résolution</TableHead>
-          <TableHead>Statut</TableHead>
-          <TableHead>Créé le</TableHead>
+    <TableHeader>
+      <TableRow>
+        <TableHead className="w-1/4">Projet</TableHead>
+        <TableHead className="w-1/4">Résolution</TableHead>
+        <TableHead className="w-1/4">Statut</TableHead>
+        <TableHead className="w-1/4">Créé le</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      {tasks.map((task) => (
+        <TableRow key={task.id}>
+          <TableCell className="w-1/4 overflow-hidden text-ellipsis whitespace-nowrap">
+            {task.projectName}
+          </TableCell>
+          <TableCell className="w-1/4 overflow-hidden text-ellipsis whitespace-nowrap">
+            {task.resolution}
+          </TableCell>
+          <TableCell className="w-1/4">{task.status}</TableCell>
+          <TableCell className="w-1/4">{new Date(task.createdAt).toLocaleString()}</TableCell>
         </TableRow>
-      </TableHeader>
-      <TableBody>
-        {tasks.map((task) => (
-          <TableRow key={task.id}>
-            <TableCell>{task.projectName}</TableCell>
-            <TableCell>{task.resolution}</TableCell>
-            <TableCell>{task.status}</TableCell>
-            <TableCell>{new Date(task.createdAt).toLocaleString()}</TableCell>
-
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+      ))}
+    </TableBody>
+  </Table>
+  
   );
 };
 /*

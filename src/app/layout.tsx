@@ -18,7 +18,18 @@ export default function RootLayout({
       <body>
         <Providers>
           <ClientProviders>{children}</ClientProviders>
-          <ToastContainer />
+          <ToastContainer
+  position="top-right"
+  autoClose={5000} // Ferme après 5 secondes
+  hideProgressBar={false}
+  newestOnTop={true}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  theme="dark" // "light" | "colored"
+/>
         </Providers>
       </body>
     </html>
