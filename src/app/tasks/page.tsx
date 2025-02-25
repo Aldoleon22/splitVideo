@@ -106,7 +106,7 @@ export default function TasksPage() {
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
               className={`px-4 py-2 rounded-md ${
-                currentPage === 1 ? "bg-gray-700 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
+                currentPage === 1 ? "bg-gray-700 cursor-not-allowed" : "bg-yellow-500 hover:bg-yellow-600"
               }`}
             >
               Précédent
@@ -118,7 +118,7 @@ export default function TasksPage() {
               onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
               className={`px-4 py-2 rounded-md ${
-                currentPage === totalPages ? "bg-gray-700 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
+                currentPage === totalPages ? "bg-gray-700 cursor-not-allowed" : "bg-yellow-500 hover:bg-yellow-600"
               }`}
             >
               Suivant

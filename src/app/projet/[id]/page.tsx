@@ -165,7 +165,7 @@ export default function ProjectPage() {
   <Button
     disabled={currentPage === 1}
     onClick={() => setCurrentPage(currentPage - 1)}
-    className={`px-4 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-200 focus:outline-none ${
+    className={`px-4 py-2 rounded-md text-white bg-yellow-500 hover:bg-yellow-600 transition-colors duration-200 focus:outline-none ${
       currentPage === 1 ? "bg-gray-500 cursor-not-allowed" : ""
     }`}
   >
@@ -177,7 +177,7 @@ export default function ProjectPage() {
   <Button
     disabled={currentPage === totalPages}
     onClick={() => setCurrentPage(currentPage + 1)}
-    className={`px-4 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-200 focus:outline-none ${
+    className={`px-4 py-2 rounded-md text-white bg-yellow-500 hover:bg-yellow-600 transition-colors duration-200 focus:outline-none ${
       currentPage === totalPages ? "bg-gray-500 cursor-not-allowed" : ""
     }`}
   >
