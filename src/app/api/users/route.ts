@@ -25,6 +25,7 @@ export async function POST(req: Request) {
       data: {
         email,
         password: hashedPassword,
+    
         isVerified: false,
       },
     })
@@ -49,6 +50,7 @@ export async function GET() {
       select: {
         id: true,
         email: true,
+        role: true,  // Le rôle est sélectionné ici
         createdAt: true,
         isVerified: true,
       },
@@ -59,4 +61,5 @@ export async function GET() {
     return NextResponse.json({ error: 'Une erreur est survenue lors de la récupération des utilisateurs.' }, { status: 500 })
   }
 }
+
 

@@ -4,7 +4,7 @@ CREATE TABLE "VideoProcessingQueue" (
     "userId" INTEGER NOT NULL,
     "projectName" TEXT NOT NULL,
     "resolution" TEXT NOT NULL,
-    "status" TEXT NOT NULL DEFAULT 'pending',
+    "status" TEXT NOT NULL DEFAULT 'en attente',
     "priority" INTEGER NOT NULL DEFAULT 0,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATETIME NOT NULL,
