@@ -15,6 +15,9 @@ import {
 import { Header } from "@/components/Header";
 import { Description } from "@radix-ui/react-dialog";
 import { toast } from "react-toastify";
+import ReactPaginate from "react-paginate";
+import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 
 export default function UsersPage() {
   const [users, setUsers] = useState([]);
@@ -27,6 +30,30 @@ export default function UsersPage() {
   const [error, setError] = useState("");
   const [deleteConfirmationOpen, setDeleteConfirmationOpen] = useState(false);
   const [userToDelete, setUserToDelete] = useState<any>(null);
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const usersPerPage = 5;
+  const pageCount = Math.ceil(users.length / usersPerPage);
+
+  const handlePageChange = ({ selected }: { selected: number }) => {
+    setCurrentPage(selected);
+  };
+
+  const offset = currentPage * usersPerPage;
+  const currentUsers = users.slice(offset, offset + usersPerPage);
+
+  //restriction page
+  const { data: session, status } = useSession();
+ 
+  useEffect(() => {
+  
+    if (status === "loading") return; // Attendre que la session se charge
+    if (!session || session.user.role !== "Admin") {
+      redirect("/unauthorized"); // 🔥 Remplace useRouter() par redirect()
+    }
+  }, [session, status]);
+// end restriction page
+
 
   useEffect(() => {
     fetchUsers();
@@ -139,7 +166,7 @@ export default function UsersPage() {
   };
 
   return (
-    <div className=" bg-gray-700">
+    <div className="min-h-screen bg-gray-900 text-gray-100">
       <Header />
       <h1 className="text-2xl font-bold mb-4">Gestion des utilisateurs</h1>
 
@@ -314,46 +341,67 @@ export default function UsersPage() {
           </tr>
         </thead>
         <tbody>
-          {users.length > 0 ? (
-            users.map((user: any) => (
+          {currentUsers.length > 0 ? (
+            currentUsers.map((user: any) => (
               <tr key={user.id}>
                 <td className="border p-2">{user.email}</td>
                 <td className="border p-2">{user.role}</td>
-                <td className="border p-2">{new Date(user.createdAt).toLocaleString()}</td>
+                <td className="border p-2">
+                  {new Date(user.createdAt).toLocaleString()}
+                </td>
                 <td className="border p-2 flex justify-center items-center">
-                  <Button
+                  <button
                     onClick={() => {
                       setCurrentUser(user);
                       setEmail(user.email);
                       setPassword("");
-                      setRole(user.role); // Correctement réinitialisé le statut lors de la modification
+                      setRole(user.role);
                       setEditModalOpen(true);
                     }}
+                    className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
                   >
                     Modifier
-                  </Button>
-                  <Button
+                  </button>
+                  <button
                     onClick={() => {
                       setUserToDelete(user);
                       setDeleteConfirmationOpen(true);
                     }}
-                    className="ml-2 bg-red-500 text-white hover:bg-red-600"
+                    className="ml-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
                   >
                     Supprimer
-                  </Button>
+                  </button>
                 </td>
-
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan={3} className="border p-2 text-center">
+              <td colSpan={4} className="border p-2 text-center">
                 Aucun utilisateur trouvé.
               </td>
             </tr>
           )}
         </tbody>
       </table>
+
+      {/* Pagination */}
+      {users.length > usersPerPage && (
+        <ReactPaginate
+          previousLabel={"Précédent"}
+          nextLabel={"Suivant"}
+          breakLabel={"..."}
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={3}
+          onPageChange={handlePageChange}
+          containerClassName={"flex justify-center mt-4 space-x-2"}
+          pageClassName={"border px-3 py-1 rounded cursor-pointer"}
+          activeClassName={"bg-blue-500 text-white"}
+          previousClassName={"border px-3 py-1 rounded cursor-pointer"}
+          nextClassName={"border px-3 py-1 rounded cursor-pointer"}
+          disabledClassName={"opacity-50 cursor-not-allowed"}
+        />
+      )}
     </div>
   );
 }

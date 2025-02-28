@@ -46,7 +46,7 @@ export default function HomePage() {
       </div>
     )
   }
-
+console.log(session)
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
       setSelectedFile(event.target.files[0])

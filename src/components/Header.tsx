@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useSession, signOut } from "next-auth/react"
 import Link from 'next/link'
-import { List, User, Settings, LogOut } from 'lucide-react'
+import { User, Settings, LogOut } from 'lucide-react'
 import { IoIosNotifications, IoMdCloudUpload } from 'react-icons/io';
 
 import { Button } from "@/components/ui/button"
@@ -25,6 +25,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Users } from "lucide-react"
 
 export function Header() {
   const { data: session } = useSession()
@@ -116,6 +117,16 @@ export function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
+                 {/* Partie visible seulement pour l'Admin */}
+      {session?.user.role === "Admin" && (
+              <DropdownMenuItem onSelect={() => setIsSettingsOpen(true)}>
+                <Link href="/users" className="flex items-center text-gray-300 hover:text-white">
+                  <Users className="mr-2 h-4 w-4" />
+                  <span>Gestion d'utilisateurs</span>
+                  </Link>
+                </DropdownMenuItem>
+      )}
+                <DropdownMenuSeparator />
                 <DropdownMenuItem onSelect={() => setIsSettingsOpen(true)}>
                   <Settings className="mr-2 h-4 w-4" />
                   <span>Paramètres</span>

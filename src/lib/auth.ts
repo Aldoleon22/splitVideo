@@ -38,22 +38,25 @@ export const authOptions: AuthOptions = {
           id: user.id.toString(),
           email: user.email,
           isVerified: user.isVerified,
+          role: user.role,
         }
       }
     })
   ],
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user }) {  
       if (user) {
         token.id = user.id
         token.isVerified = user.isVerified
+        token.role = user.role; 
       }
       return token
     },
-    async session({ session, token }) {
+    async session({ session, token }) {  
       if (session.user) {
         session.user.id = token.id as string
         session.user.isVerified = token.isVerified as boolean
+        session.user.role = token.role;
       }
       return session
     }
@@ -63,4 +66,3 @@ export const authOptions: AuthOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
 }
-
