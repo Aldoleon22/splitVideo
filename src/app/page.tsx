@@ -46,46 +46,46 @@ export default function HomePage() {
       </div>
     )
   }
-console.log(session)
+  console.log(session)
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
       setSelectedFile(event.target.files[0])
     }
   }
- 
 
-  
+
+
   const handleImport = async () => {
     if (!projectName.trim()) {
       setError("Le nom du projet est obligatoire.");
       toast.warn("Le nom du projet est obligatoire.");
       return;
     }
-  
+
     if (!selectedFile) {
       setError("Veuillez sélectionner un fichier à importer.");
       toast.warn("Veuillez sélectionner un fichier à importer.");
       return;
     }
-  
+
     setIsLoading(true);
     setError(null);
     setSuccess(null);
     setProgress(0);
-  
+
     try {
       const checkResponse = await fetch(
         `/api/check-project?projectName=${encodeURIComponent(projectName)}&userId=${encryptId(parseInt(session.user.id))}`
       );
       const checkResult = await checkResponse.json();
-  
+
       if (checkResult.exists) {
         setShowConfirmDialog(true);
         setIsLoading(false);
         toast.warn("Le projet existe déjà. Confirmation requise.");
         return;
       }
-  
+
       await uploadInChunks(selectedFile);
       setSuccess("Vidéo uploadée avec succès !");
       toast.success("Vidéo uploadée avec succès !");
@@ -101,19 +101,19 @@ console.log(session)
       setIsLoading(false);
     }
   };
-  
+
   const uploadInChunks = async (file: File) => {
     const totalChunks = Math.ceil(file.size / CHUNK_SIZE);
     const userId = encryptId(parseInt(session.user.id));
     const fileId = `${userId}-${Date.now()}`;
     const originalFileName = file.name;
     let uploadSuccess = true;
-  
+
     for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
       const start = chunkIndex * CHUNK_SIZE;
       const end = Math.min(start + CHUNK_SIZE, file.size);
       const chunk = file.slice(start, end);
-  
+
       const formData = new FormData();
       formData.append("file", chunk);
       formData.append("fileId", fileId);
@@ -123,17 +123,17 @@ console.log(session)
       formData.append("resolution", resolution);
       formData.append("userId", userId);
       formData.append("originalFileName", originalFileName);
-  
+
       try {
         const response = await fetch("/api/upload-chunks", {
           method: "POST",
           body: formData,
         });
-  
+
         if (!response.ok) {
           throw new Error(`Échec de l'envoi du chunk ${chunkIndex}`);
         }
-  
+
         setProgress(((chunkIndex + 1) / totalChunks) * 100);
       } catch (error) {
         console.error(`Erreur lors de l'upload du chunk ${chunkIndex}:`, error);
@@ -142,7 +142,7 @@ console.log(session)
         break;
       }
     }
-  
+
     if (uploadSuccess) {
       await mergeChunks(fileId, originalFileName);
       await processVideo();
@@ -151,7 +151,7 @@ console.log(session)
       toast.error("L'upload a échoué, veuillez réessayer plus tard.");
     }
   };
-  
+
   const mergeChunks = async (fileId: string, originalFileName: string) => {
     try {
       const mergeResponse = await fetch("/api/merge-chunks", {
@@ -159,11 +159,11 @@ console.log(session)
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fileId, projectName, resolution, userId: encryptId(parseInt(session.user.id)), originalFileName }),
       });
-  
+
       if (!mergeResponse.ok) {
         throw new Error("Échec de l'assemblage du fichier.");
       }
-  
+
       setSuccess("Vidéo assemblée avec succès !");
       toast.success("Vidéo assemblée avec succès !");
     } catch (error) {
@@ -173,7 +173,7 @@ console.log(session)
       throw error;
     }
   };
-  
+
   const processVideo = async () => {
     try {
       const processResponse = await fetch("/api/process-video", {
@@ -185,13 +185,13 @@ console.log(session)
           userId: encryptId(parseInt(session.user.id)),
         }),
       });
-  
+
       const result = await processResponse.json();
-  
+
       if (!processResponse.ok) {
         throw new Error(result.message || "Erreur lors de l'ajout à la file d'attente");
       }
-  
+
       setSuccess(`Vidéo ajoutée à la file d'attente. ID tâche : ${result.queueId}`);
       toast.success(`Vidéo en file d'attente. ID tâche : ${result.queueId}`);
       await refreshProjects();
@@ -201,7 +201,7 @@ console.log(session)
       toast.error(errorMessage);
     }
   };
-  
+
   const uploadInChunk: React.MouseEventHandler<HTMLButtonElement> = (event) => {
     const uploadFile = async () => {
       if (selectedFile) {
@@ -214,7 +214,7 @@ console.log(session)
     setShowConfirmDialog(false);
     uploadFile();
   };
-  
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <Header />
@@ -236,6 +236,7 @@ console.log(session)
                   placeholder="Nom du projet"
                   className="bg-gray-700 border-gray-600"
                   required
+                  disabled={isLoading} // Désactiver pendant l'import
                 />
               </div>
 
@@ -250,7 +251,8 @@ console.log(session)
                     value={selectedFile ? selectedFile.name : ''}
                     placeholder="Aucun fichier sélectionné"
                     className="bg-gray-700 border-gray-600 flex-1"
-                    onClick={() => fileInputRef.current?.click()}
+                    onClick={() => !isLoading && fileInputRef.current?.click()} // Empêcher la sélection pendant l'import
+                    disabled={isLoading}
                   />
                   <Input
                     ref={fileInputRef}
@@ -258,11 +260,13 @@ console.log(session)
                     className="hidden"
                     onChange={handleFileChange}
                     accept=".mp4,.avi,.mkv,.mov,.flv"
+                    disabled={isLoading}
                   />
-                  <Button 
-                    variant="secondary" 
+                  <Button
+                    variant="secondary"
                     className="bg-gray-700 hover:bg-gray-600"
-                    onClick={() => fileInputRef.current?.click()}
+                    onClick={() => !isLoading && fileInputRef.current?.click()} // Désactiver le bouton
+                    disabled={isLoading}
                   >
                     Parcourir
                   </Button>
@@ -273,7 +277,11 @@ console.log(session)
                 <Label className="block text-sm font-medium">
                   Résolution :
                 </Label>
-                <Select defaultValue="original" onValueChange={(value) => setResolution(value)}>
+                <Select
+                  defaultValue="original"
+                  onValueChange={(value) => setResolution(value)}
+                  disabled={isLoading} // Désactiver le select pendant l'import
+                >
                   <SelectTrigger className="bg-gray-700 border-gray-600">
                     <SelectValue placeholder="Sélectionnez la résolution" />
                   </SelectTrigger>
@@ -286,27 +294,27 @@ console.log(session)
                 </Select>
               </div>
 
-              <Button 
+              <Button
                 className="w-full bg-yellow-500 hover:bg-yellow-600 text-black"
                 onClick={handleImport}
-                disabled={isLoading}
+                disabled={isLoading} // Désactiver le bouton Importer
               >
                 {isLoading ? <Loader className="mr-2 h-4 w-4" /> : null}
                 Importer
               </Button>
-              <progress 
-        value={progress} 
-        max={100} 
-        className="w-full h-2 bg-gray-700 border-gray-600 appearance-none"  
-          />
-            </div>
 
-          
+              <progress
+                value={progress}
+                max={100}
+                className="w-full h-2 bg-gray-700 border-gray-600 appearance-none"
+              />
+            </div>
           </div>
         </main>
+
       </div>
 
-          
+
       <Dialog open={showConfirmDialog} onOpenChange={setShowConfirmDialog}>
         <DialogContent>
           <DialogHeader>
