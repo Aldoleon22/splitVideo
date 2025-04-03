@@ -52,7 +52,7 @@ videoQueue.process(async (job) => {
 
     await updateQueueItemStatus(queueItemId, 'en cours');
 
-    const scriptPath = path.join(process.cwd(), 'scripts', 'cropVideo.php');
+    const scriptPath = path.join(process.cwd(), '..', 'scripts', 'cropVideo.php');
     const command = `php ${scriptPath} '${encryptedUserId}' '${projectName}' '${resolution}'`;
     
     console.log(`Exécution de la commande: ${command}`);
