@@ -7,13 +7,12 @@
   "scripts": {
     "start": "next start -p 3037",
     "build": "next build",
-
     "dev": "next dev -p 3037",
     "lint": "next lint",
     "queue-worker": "node workers/queue-worker.js",
     "start:pm2": "pm2 start ecosystem.config.cjs",
     "start:worker": "node workers/videoProcessor.js",
-    "ngrok": "ngrok http 3036"
+    "ngrok": "ngrok http 3037"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
