@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "next start -p 3036",
+    "start": "next start -p 3037",
     "build": "next build",
 
-    "dev": "next dev -p 3036",
+    "dev": "next dev -p 3037",
     "lint": "next lint",
     "queue-worker": "node workers/queue-worker.js",
     "start:pm2": "pm2 start ecosystem.config.cjs",
